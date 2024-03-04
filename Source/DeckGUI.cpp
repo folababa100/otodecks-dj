@@ -1,6 +1,6 @@
 #include <JuceHeader.h>
 #include "DeckGUI.h"
-#include "Initiallise.h"
+#include "Initialise.h"
 
 
 DeckGUI::DeckGUI(DJAudioPlayer* _player,
@@ -24,10 +24,10 @@ DeckGUI::DeckGUI(DJAudioPlayer* _player,
     loadImageButtonImage(stopButton, BinaryData::stop_png, BinaryData::stop_pngSize);
     loadImageButtonImage(loadButton, BinaryData::load_png, BinaryData::load_pngSize);
 
-    Initiallise::buttonOptions(this, &playButton, this, true, "", 0.8f);
-    Initiallise::buttonOptions(this, &pauseButton, this, true, "", 0.8f);
-    Initiallise::buttonOptions(this, &stopButton, this, true, "", 0.8f);
-    Initiallise::buttonOptions(this, &loadButton, this, true, "", 0.8f);
+    Initialise::buttonOptions(this, &playButton, this, true, "", 0.8f);
+    Initialise::buttonOptions(this, &pauseButton, this, true, "", 0.8f);
+    Initialise::buttonOptions(this, &stopButton, this, true, "", 0.8f);
+    Initialise::buttonOptions(this, &loadButton, this, true, "", 0.8f);
 
     addAndMakeVisible(posSlider);
     addAndMakeVisible(waveformDisplay);

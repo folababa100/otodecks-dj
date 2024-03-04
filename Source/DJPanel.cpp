@@ -1,6 +1,6 @@
 #include <JuceHeader.h>
 #include "DJPanel.h"
-#include "Initiallise.h"
+#include "Initialise.h"
 
 //==============================================================================
 DJPanel::DJPanel(DJAudioPlayer* _player,
@@ -13,14 +13,14 @@ DJPanel::DJPanel(DJAudioPlayer* _player,
     hcPos4(-1.0),
     experienceLevel(0)
 {
-    Initiallise::sliderOptions(this, &volSlider, this, Slider::LinearVertical, Slider::TextBoxBelow, false, 50, 10, 0.0, 100.0, 1.0, &v1, volSlider.textBoxOutlineColourId, Colours::transparentWhite);
-    Initiallise::sliderOptions(this, &speedSlider, this, Slider::LinearVertical, Slider::TextBoxBelow, false, 50, 10, 0.01, 2.0, 0.1, &v1, speedSlider.textBoxOutlineColourId, Colours::transparentWhite);
-    Initiallise::sliderOptions(this, &loopSlider, this, Slider::IncDecButtons, Slider::TextBoxAbove, false, 50, 20, 0.0, 16.0, 1.0, &v1, loopSlider.textBoxOutlineColourId, Colours::transparentWhite);
+    Initialise::sliderOptions(this, &volSlider, this, Slider::LinearVertical, Slider::TextBoxBelow, false, 50, 10, 0.0, 100.0, 1.0, &v1, volSlider.textBoxOutlineColourId, Colours::transparentWhite);
+    Initialise::sliderOptions(this, &speedSlider, this, Slider::LinearVertical, Slider::TextBoxBelow, false, 50, 10, 0.01, 2.0, 0.1, &v1, speedSlider.textBoxOutlineColourId, Colours::transparentWhite);
+    Initialise::sliderOptions(this, &loopSlider, this, Slider::IncDecButtons, Slider::TextBoxAbove, false, 50, 20, 0.0, 16.0, 1.0, &v1, loopSlider.textBoxOutlineColourId, Colours::transparentWhite);
 
-    Initiallise::labelOptions(this, &volume, "VOL", dontSendNotification, Justification::centred, 14.0f, label.textColourId, Colours::cyan);
-    Initiallise::labelOptions(this, &speed, "SPEED", dontSendNotification, Justification::centred, 14.0f, label.textColourId, Colours::fuchsia);
-    Initiallise::labelOptions(this, &loop, "Loop", dontSendNotification, Justification::centred, 16.0f, label.textColourId, Colours::cyan);
-    Initiallise::labelOptions(this, &hotCue, "HotCue", dontSendNotification, Justification::centred, 16.0f, label.textColourId, Colours::fuchsia);
+    Initialise::labelOptions(this, &volume, "VOL", dontSendNotification, Justification::centred, 14.0f, label.textColourId, Colours::cyan);
+    Initialise::labelOptions(this, &speed, "SPEED", dontSendNotification, Justification::centred, 14.0f, label.textColourId, Colours::fuchsia);
+    Initialise::labelOptions(this, &loop, "Loop", dontSendNotification, Justification::centred, 16.0f, label.textColourId, Colours::cyan);
+    Initialise::labelOptions(this, &hotCue, "HotCue", dontSendNotification, Justification::centred, 16.0f, label.textColourId, Colours::fuchsia);
 
     volume.attachToComponent(&volSlider, false);
     speed.attachToComponent(&speedSlider, false);

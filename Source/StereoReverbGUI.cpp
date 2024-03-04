@@ -1,26 +1,26 @@
 #include <JuceHeader.h>
 #include "StereoReverbGUI.h"
-#include "Initiallise.h"
+#include "Initialise.h"
 
 //==============================================================================
 StereoReverbGUI::StereoReverbGUI(StereoReverb* _stereoReverb) : stereoReverb(_stereoReverb)
 {
     // Sliders
-    Initiallise::sliderOptions(this, &roomSizeSlider, this, Slider::LinearVertical, Slider::TextBoxBelow, false, 50, 10, 0.0, 1.0, 0.01, &v1, roomSizeSlider.textBoxOutlineColourId, Colours::transparentWhite);
-    Initiallise::sliderOptions(this, &dampingSlider, this, Slider::LinearVertical, Slider::TextBoxBelow, false, 50, 10, 0.0, 1.0, 0.01, &v1, dampingSlider.textBoxOutlineColourId, Colours::transparentWhite);
-    Initiallise::sliderOptions(this, &wetLevelSlider, this, Slider::LinearVertical, Slider::TextBoxBelow, false, 50, 10, 0.0, 1.0, 0.01, &v1, wetLevelSlider.textBoxOutlineColourId, Colours::transparentWhite);
-    Initiallise::sliderOptions(this, &dryLevelSlider, this, Slider::LinearVertical, Slider::TextBoxBelow, false, 50, 10, 0.0, 1.0, 0.01, &v1, dryLevelSlider.textBoxOutlineColourId, Colours::transparentWhite);
-    Initiallise::sliderOptions(this, &widthSlider, this, Slider::LinearVertical, Slider::TextBoxBelow, false, 50, 10, 0.0, 1.0, 0.01, &v1, widthSlider.textBoxOutlineColourId, Colours::transparentWhite);
-    Initiallise::sliderOptions(this, &freezeModeSlider, this, Slider::LinearVertical, Slider::TextBoxBelow, false, 50, 10, 0.0, 1.0, 0.01, &v1, freezeModeSlider.textBoxOutlineColourId, Colours::transparentWhite);
+    Initialise::sliderOptions(this, &roomSizeSlider, this, Slider::LinearVertical, Slider::TextBoxBelow, false, 50, 10, 0.0, 1.0, 0.01, &v1, roomSizeSlider.textBoxOutlineColourId, Colours::transparentWhite);
+    Initialise::sliderOptions(this, &dampingSlider, this, Slider::LinearVertical, Slider::TextBoxBelow, false, 50, 10, 0.0, 1.0, 0.01, &v1, dampingSlider.textBoxOutlineColourId, Colours::transparentWhite);
+    Initialise::sliderOptions(this, &wetLevelSlider, this, Slider::LinearVertical, Slider::TextBoxBelow, false, 50, 10, 0.0, 1.0, 0.01, &v1, wetLevelSlider.textBoxOutlineColourId, Colours::transparentWhite);
+    Initialise::sliderOptions(this, &dryLevelSlider, this, Slider::LinearVertical, Slider::TextBoxBelow, false, 50, 10, 0.0, 1.0, 0.01, &v1, dryLevelSlider.textBoxOutlineColourId, Colours::transparentWhite);
+    Initialise::sliderOptions(this, &widthSlider, this, Slider::LinearVertical, Slider::TextBoxBelow, false, 50, 10, 0.0, 1.0, 0.01, &v1, widthSlider.textBoxOutlineColourId, Colours::transparentWhite);
+    Initialise::sliderOptions(this, &freezeModeSlider, this, Slider::LinearVertical, Slider::TextBoxBelow, false, 50, 10, 0.0, 1.0, 0.01, &v1, freezeModeSlider.textBoxOutlineColourId, Colours::transparentWhite);
 
     // Labels
-    Initiallise::labelOptions(this, &label, "Stereo Reverb", dontSendNotification, Justification::centred, 14.0f, label.textColourId, Colours::cyan);
-    Initiallise::labelOptions(this, &roomSize, "RS", dontSendNotification, Justification::centred, 14.0f, label.textColourId, Colours::fuchsia);
-    Initiallise::labelOptions(this, &damping, "DMP", dontSendNotification, Justification::centred, 14.0f, label.textColourId, Colours::cyan);
-    Initiallise::labelOptions(this, &wetLevel, "WL", dontSendNotification, Justification::centred, 14.0f, label.textColourId, Colours::fuchsia);
-    Initiallise::labelOptions(this, &dryLevel, "DL", dontSendNotification, Justification::centred, 14.0f, label.textColourId, Colours::cyan);
-    Initiallise::labelOptions(this, &width, "W", dontSendNotification, Justification::centred, 14.0f, label.textColourId, Colours::fuchsia);
-    Initiallise::labelOptions(this, &freezeMode, "FM", dontSendNotification, Justification::centred, 14.0f, label.textColourId, Colours::cyan);
+    Initialise::labelOptions(this, &label, "Stereo Reverb", dontSendNotification, Justification::centred, 14.0f, label.textColourId, Colours::cyan);
+    Initialise::labelOptions(this, &roomSize, "RS", dontSendNotification, Justification::centred, 14.0f, label.textColourId, Colours::fuchsia);
+    Initialise::labelOptions(this, &damping, "DMP", dontSendNotification, Justification::centred, 14.0f, label.textColourId, Colours::cyan);
+    Initialise::labelOptions(this, &wetLevel, "WL", dontSendNotification, Justification::centred, 14.0f, label.textColourId, Colours::fuchsia);
+    Initialise::labelOptions(this, &dryLevel, "DL", dontSendNotification, Justification::centred, 14.0f, label.textColourId, Colours::cyan);
+    Initialise::labelOptions(this, &width, "W", dontSendNotification, Justification::centred, 14.0f, label.textColourId, Colours::fuchsia);
+    Initialise::labelOptions(this, &freezeMode, "FM", dontSendNotification, Justification::centred, 14.0f, label.textColourId, Colours::cyan);
 
     // Slider labels
     roomSize.attachToComponent(&roomSizeSlider, false);

@@ -1,6 +1,6 @@
 #include <JuceHeader.h>
 #include "LibraryComponent.h"
-#include "Initiallise.h"
+#include "Initialise.h"
 
 //==============================================================================
 LibraryComponent::LibraryComponent(AudioFormatManager& _formatManager,
@@ -21,10 +21,10 @@ LibraryComponent::LibraryComponent(AudioFormatManager& _formatManager,
     // Image button
     auto insertImage = ImageCache::getFromMemory(BinaryData::folder_png, BinaryData::folder_pngSize);
     insertButton.setImages(true, true, true, insertImage, 1, Colours::transparentWhite, Image(nullptr), 1, Colours::transparentWhite, Image(nullptr), 1, Colours::transparentBlack);
-    Initiallise::buttonOptions(this, &insertButton, this, false, "Insert track to library", 0.75f);
+    Initialise::buttonOptions(this, &insertButton, this, false, "Insert track to library", 0.75f);
 
     // Label
-    Initiallise::labelOptions(this, &label, "Playlist", dontSendNotification, Justification::horizontallyCentred, 14.0f, label.textColourId, Colours::violet);
+    Initialise::labelOptions(this, &label, "Playlist", dontSendNotification, Justification::horizontallyCentred, 14.0f, label.textColourId, Colours::violet);
     label.toBack();
 
     // Table component
@@ -41,7 +41,7 @@ LibraryComponent::LibraryComponent(AudioFormatManager& _formatManager,
     // Search Bar
     addAndMakeVisible(searchBar);
     searchBar.addListener(this);
-    searchBar.setTextToShowWhenEmpty("Search Your Added Tracks Here...", Colour::fromRGBA(201, 0, 255, 255));
+    searchBar.setTextToShowWhenEmpty("Search your tracks", Colour::fromRGBA(201, 0, 255, 255));
 }
 
 LibraryComponent::~LibraryComponent()

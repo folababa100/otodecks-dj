@@ -141,7 +141,7 @@ $(JUCE_OBJDIR)/DJPanel_e9fc5e9f.o: ../../Source/DJPanel.cpp
 	@echo "Compiling DJPanel.cpp"
 	$(V_AT)$(CXX) $(JUCE_CXXFLAGS) $(JUCE_CPPFLAGS_APP) $(JUCE_CFLAGS_APP) -o "$@" -c "$<"
 
-$(JUCE_OBJDIR)/Initiallise_d3bd3eb4.o: ../../Source/Initiallise.cpp
+$(JUCE_OBJDIR)/Initiallise_d3bd3eb4.o: ../../Source/Initialise.cpp
 	-$(V_AT)mkdir -p $(@D)
 	@echo "Compiling Initiallise.cpp"
 	$(V_AT)$(CXX) $(JUCE_CXXFLAGS) $(JUCE_CPPFLAGS_APP) $(JUCE_CFLAGS_APP) -o "$@" -c "$<"

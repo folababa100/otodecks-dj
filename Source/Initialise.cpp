@@ -1,8 +1,8 @@
 #include <JuceHeader.h>
-#include "Initiallise.h"
+#include "Initialise.h"
 
 //==============================================================================
-Initiallise::Initiallise()
+Initialise::Initialise()
 {
     // In your constructor, you should add any child components, and
     // initialise any special settings that your component needs.
@@ -10,7 +10,7 @@ Initiallise::Initiallise()
 }
 
 // Initialise slider settings
-void Initiallise::sliderOptions(Component* component, Slider* slider, Slider::Listener* listener,
+void Initialise::sliderOptions(Component* component, Slider* slider, Slider::Listener* listener,
                                 Slider::SliderStyle style, Slider::TextEntryBoxPosition textPos,
                                 bool readOnly, int textBoxW, int textBoxH, double rangeStart,
                                 double rangeEnd, double increment, LookAndFeel* LookandFeels,
@@ -34,7 +34,7 @@ void Initiallise::sliderOptions(Component* component, Slider* slider, Slider::Li
 }
 
 // Initialise label settings
-void Initiallise::labelOptions(Component* component, Label* label, String title,
+void Initialise::labelOptions(Component* component, Label* label, String title,
                                NotificationType notiType, Justification justification,
                                float fontSize, Label::ColourIds colourid, Colour colour)
 {
@@ -51,7 +51,7 @@ void Initiallise::labelOptions(Component* component, Label* label, String title,
 }
 
 // Initialise button settings
-void Initiallise::buttonOptions(Component* component, Button* button,
+void Initialise::buttonOptions(Component* component, Button* button,
                                 Button::Listener* listener, bool toggleOn,
                                 String tooltip, float alpha)
 {
