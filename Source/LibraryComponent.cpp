@@ -41,7 +41,7 @@ LibraryComponent::LibraryComponent(AudioFormatManager& _formatManager,
     // Search Bar
     addAndMakeVisible(searchBar);
     searchBar.addListener(this);
-    searchBar.setTextToShowWhenEmpty("Search your tracks", Colour::fromRGBA(201, 0, 255, 255));
+    searchBar.setTextToShowWhenEmpty("Search your tracks", Colour::fromRGBA(102, 157, 246, 255));
 }
 
 LibraryComponent::~LibraryComponent()
@@ -50,7 +50,7 @@ LibraryComponent::~LibraryComponent()
 
 void LibraryComponent::paint(Graphics& g)
 {
-    g.fillAll(Colour::fromRGBA(33, 0, 75, 255));
+    g.fillAll(Colour::fromRGBA(255, 183, 197, 255));
 }
 
 void LibraryComponent::resized()
@@ -58,11 +58,11 @@ void LibraryComponent::resized()
     double rowH = getHeight() / 8;
     double colW = getWidth() / 14;
     tableComponent.setBounds(0, rowH, getWidth(), getHeight());
-    tableComponent.setColour(ListBox::backgroundColourId, Colour::fromRGBA(33, 0, 75, 255));
+    tableComponent.setColour(ListBox::backgroundColourId, Colour::fromRGBA(255, 183, 197, 255));
     tableComponent.setColour(ListBox::outlineColourId, Colour::fromRGBA(33, 0, 0, 255));
     label.setBounds(colW * 5, rowH * 0.2, colW * 4, rowH * 0.6);
     searchBar.setBounds(rowH * 0.1, rowH * 0.1, colW * 6, rowH * 0.9);
-    searchBar.setColour(TextEditor::backgroundColourId, Colour::fromRGBA(33, 0, 75, 255));
+    searchBar.setColour(TextEditor::backgroundColourId, Colour::fromRGBA(255, 183, 197, 255));
     insertButton.setBounds(colW * 13, rowH * 0.2, colW, rowH * 0.6);
 }
 
@@ -80,11 +80,11 @@ void LibraryComponent::paintRowBackground(Graphics& g,
     // Highlight selected row
     if (rowIsSelected)
     {
-        g.fillAll(Colour::fromRGBA(102, 94, 199, 255));
+        g.fillAll(Colour::fromRGBA(255, 209, 163, 255));
     }
     else if (rowNumber % 2)
     {
-        g.fillAll(Colour::fromRGBA(103, 0, 232, 255));
+        g.fillAll(Colour::fromRGBA(255, 134, 123, 255));
     }
 }
 
@@ -139,8 +139,8 @@ Component* LibraryComponent::refreshComponentForCell(int rowNumber,
         loadLBtn->setComponentID(id);
         loadLBtn->setButtonText("<");
         loadLBtn->setMouseCursor(MouseCursor::PointingHandCursor);
-        loadLBtn->setColour(TextButton::ColourIds::buttonColourId, Colours::cyan);
-        loadLBtn->setColour(TextButton::ColourIds::textColourOffId, Colours::fuchsia);
+        loadLBtn->setColour(TextButton::ColourIds::buttonColourId, Colour::fromRGBA(11, 24, 98, 255));
+        loadLBtn->setColour(TextButton::ColourIds::textColourOffId, Colour::fromRGBA(79, 0, 16, 255));
         loadLBtn->addListener(this);
 
         return loadLBtn;
@@ -159,8 +159,8 @@ Component* LibraryComponent::refreshComponentForCell(int rowNumber,
         loadRBtn->setComponentID(id);
         loadRBtn->setButtonText(">");
         loadRBtn->setMouseCursor(MouseCursor::PointingHandCursor);
-        loadRBtn->setColour(TextButton::ColourIds::buttonColourId, Colours::fuchsia);
-        loadRBtn->setColour(TextButton::ColourIds::textColourOffId, Colours::cyan);
+        loadRBtn->setColour(TextButton::ColourIds::buttonColourId, Colour::fromRGBA(79, 0, 16, 255));
+        loadRBtn->setColour(TextButton::ColourIds::textColourOffId, Colour::fromRGBA(11, 24, 98, 255));
         loadRBtn->addListener(this);
 
         return loadRBtn;

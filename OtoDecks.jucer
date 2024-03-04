@@ -30,8 +30,8 @@
       <FILE id="Yw6UWW" name="DJAudioPlayer.h" compile="0" resource="0" file="Source/DJAudioPlayer.h"/>
       <FILE id="wPQUTc" name="DJPanel.cpp" compile="1" resource="0" file="Source/DJPanel.cpp"/>
       <FILE id="VESEIu" name="DJPanel.h" compile="0" resource="0" file="Source/DJPanel.h"/>
-      <FILE id="T90q9w" name="Initiallise.cpp" compile="1" resource="0" file="Source/Initiallise.cpp"/>
-      <FILE id="vzWTYK" name="Initiallise.h" compile="0" resource="0" file="Source/Initiallise.h"/>
+      <FILE id="T90q9w" name="Initialise.cpp" compile="1" resource="0" file="Source/Initialise.cpp"/>
+      <FILE id="vzWTYK" name="Initialise.h" compile="0" resource="0" file="Source/Initialise.h"/>
       <FILE id="ptvg8o" name="LibraryComponent.cpp" compile="1" resource="0"
             file="Source/LibraryComponent.cpp"/>
       <FILE id="lAP3ih" name="LibraryComponent.h" compile="0" resource="0"

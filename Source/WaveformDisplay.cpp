@@ -25,7 +25,7 @@ WaveformDisplay::~WaveformDisplay()
 void WaveformDisplay::paint(Graphics& g)
 {
     // Fill background
-    g.fillAll(Colour::fromRGBA(33, 0, 75, 255));
+    g.fillAll(Colour::fromRGBA(255, 183, 197, 255));
 
     g.setColour(Colours::orangered);
     if (fileLoaded)
@@ -52,7 +52,7 @@ void WaveformDisplay::paint(Graphics& g)
             audioThumb.getTotalLength(),
             0,
             1.0f);
-        g.setColour(Colour::fromRGBA(255, 0, 244, 255));
+        g.setColour(Colour::fromRGBA(76, 104, 215, 255));
 
         // Draw playhead.
         double playheadPos = position * getWidth();
@@ -64,7 +64,7 @@ void WaveformDisplay::paint(Graphics& g)
     else
     {
         g.setFont(20.0f);
-        g.setColour(Colour::fromRGBA(201, 0, 255, 255));
+        g.setColour(Colour::fromRGBA(102, 157, 246, 255));
         g.drawText("File not loaded...", getLocalBounds(),
             Justification::centred, true);   // draw some placeholder text
     }

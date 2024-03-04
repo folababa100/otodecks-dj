@@ -6,13 +6,13 @@
 //==============================================================================
 /*
 */
-class Initiallise : public Component,
+class Initialise : public Component,
     public Slider::Listener,
     public Button::Listener,
     public ComboBox::Listener
 {
 public:
-    Initiallise();
+    Initialise();
 
     // Initialise slider settings
     static void sliderOptions(Component* component, Slider* slider, Slider::Listener* listener,

@@ -17,10 +17,10 @@ DJPanel::DJPanel(DJAudioPlayer* _player,
     Initialise::sliderOptions(this, &speedSlider, this, Slider::LinearVertical, Slider::TextBoxBelow, false, 50, 10, 0.01, 2.0, 0.1, &v1, speedSlider.textBoxOutlineColourId, Colours::transparentWhite);
     Initialise::sliderOptions(this, &loopSlider, this, Slider::IncDecButtons, Slider::TextBoxAbove, false, 50, 20, 0.0, 16.0, 1.0, &v1, loopSlider.textBoxOutlineColourId, Colours::transparentWhite);
 
-    Initialise::labelOptions(this, &volume, "VOL", dontSendNotification, Justification::centred, 14.0f, label.textColourId, Colours::cyan);
-    Initialise::labelOptions(this, &speed, "SPEED", dontSendNotification, Justification::centred, 14.0f, label.textColourId, Colours::fuchsia);
-    Initialise::labelOptions(this, &loop, "Loop", dontSendNotification, Justification::centred, 16.0f, label.textColourId, Colours::cyan);
-    Initialise::labelOptions(this, &hotCue, "HotCue", dontSendNotification, Justification::centred, 16.0f, label.textColourId, Colours::fuchsia);
+    Initialise::labelOptions(this, &volume, "VOL", dontSendNotification, Justification::centred, 14.0f, label.textColourId, Colour::fromRGBA(11, 24, 98, 255));
+    Initialise::labelOptions(this, &speed, "SPEED", dontSendNotification, Justification::centred, 14.0f, label.textColourId, Colour::fromRGBA(79, 0, 16, 255));
+    Initialise::labelOptions(this, &loop, "Loop", dontSendNotification, Justification::centred, 16.0f, label.textColourId, Colour::fromRGBA(11, 24, 98, 255));
+    Initialise::labelOptions(this, &hotCue, "HotCue", dontSendNotification, Justification::centred, 16.0f, label.textColourId, Colour::fromRGBA(79, 0, 16, 255));
 
     volume.attachToComponent(&volSlider, false);
     speed.attachToComponent(&speedSlider, false);
@@ -62,7 +62,7 @@ void DJPanel::paint(Graphics& g)
     double rowW = getWidth() / 4;
 
     // Fill background.
-    g.fillAll(Colour::fromRGBA(33, 0, 75, 255));
+    g.fillAll(Colour::fromRGBA(255, 183, 197, 255));
 
     g.setColour(Colours::white);
     g.setFont(16.0f);
@@ -123,7 +123,7 @@ void DJPanel::resized()
 
     // Hot Cue Buttons
     hcBtn1.setBounds(colW, colH * 4.615, buttonW, buttonH);
-    hcBtn1.setColour(TextButton::ColourIds::buttonOnColourId, Colour::fromRGB(201, 0, 255));
+    hcBtn1.setColour(TextButton::ColourIds::buttonOnColourId, Colour::fromRGB(102, 157, 246));
     hcBtn1.setColour(TextButton::ColourIds::textColourOnId, Colours::black);
     hcBtn1.setMouseCursor(MouseCursor::PointingHandCursor);
 
@@ -133,7 +133,7 @@ void DJPanel::resized()
     hcBtn2.setMouseCursor(MouseCursor::PointingHandCursor);
 
     hcBtn3.setBounds(colW, colH * 6.8, buttonW, buttonH);
-    hcBtn3.setColour(TextButton::ColourIds::buttonOnColourId, Colour::fromRGB(201, 0, 255));
+    hcBtn3.setColour(TextButton::ColourIds::buttonOnColourId, Colour::fromRGB(102, 157, 246));
     hcBtn3.setColour(TextButton::ColourIds::textColourOnId, Colours::black);
     hcBtn3.setMouseCursor(MouseCursor::PointingHandCursor);
 

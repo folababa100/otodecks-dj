@@ -77,7 +77,7 @@ OBJECTS_APP := \
   $(JUCE_OBJDIR)/DeckGUI_914d8333.o \
   $(JUCE_OBJDIR)/DJAudioPlayer_f05158f2.o \
   $(JUCE_OBJDIR)/DJPanel_e9fc5e9f.o \
-  $(JUCE_OBJDIR)/Initiallise_d3bd3eb4.o \
+  $(JUCE_OBJDIR)/Initialise_25c02cc0.o \
   $(JUCE_OBJDIR)/LibraryComponent_e4ba500b.o \
   $(JUCE_OBJDIR)/LookandFeels_c439099e.o \
   $(JUCE_OBJDIR)/StereoReverb_cd76bf73.o \
@@ -141,9 +141,9 @@ $(JUCE_OBJDIR)/DJPanel_e9fc5e9f.o: ../../Source/DJPanel.cpp
 	@echo "Compiling DJPanel.cpp"
 	$(V_AT)$(CXX) $(JUCE_CXXFLAGS) $(JUCE_CPPFLAGS_APP) $(JUCE_CFLAGS_APP) -o "$@" -c "$<"
 
-$(JUCE_OBJDIR)/Initiallise_d3bd3eb4.o: ../../Source/Initialise.cpp
+$(JUCE_OBJDIR)/Initialise_25c02cc0.o: ../../Source/Initialise.cpp
 	-$(V_AT)mkdir -p $(@D)
-	@echo "Compiling Initiallise.cpp"
+	@echo "Compiling Initialise.cpp"
 	$(V_AT)$(CXX) $(JUCE_CXXFLAGS) $(JUCE_CPPFLAGS_APP) $(JUCE_CFLAGS_APP) -o "$@" -c "$<"
 
 $(JUCE_OBJDIR)/LibraryComponent_e4ba500b.o: ../../Source/LibraryComponent.cpp

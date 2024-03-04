@@ -52,7 +52,7 @@ void DeckGUI::paint(Graphics& g)
 {
 
     // Background colour
-    g.fillAll(Colour::fromRGBA(33, 0, 75, 255));
+    g.fillAll(Colour::fromRGBA(255, 183, 197, 255));
 
     // Set position, transform the disc
     g.setOrigin(getWidth() / 2, getHeight() / 1.8);
@@ -88,7 +88,7 @@ void DeckGUI::resized()
     posSlider.setMouseCursor(MouseCursor::DraggingHandCursor);
     posSlider.setTextBoxStyle(Slider::TextEntryBoxPosition::NoTextBox, true, 0, 0);
     posSlider.setColour(Slider::ColourIds::thumbColourId, accentColour);
-    posSlider.setColour(Slider::ColourIds::rotarySliderFillColourId, Colour::fromRGBA(103, 0, 232, 255));
+    posSlider.setColour(Slider::ColourIds::rotarySliderFillColourId, Colour::fromRGBA(255, 134, 123, 255));
     posSlider.setRotaryParameters(MathConstants<float>::pi,
         MathConstants<float>::twoPi + MathConstants<float>::pi,
         true);

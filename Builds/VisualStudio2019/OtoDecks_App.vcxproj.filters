@@ -655,7 +655,7 @@
     <ClCompile Include="..\..\Source\DJPanel.cpp">
       <Filter>OtoDecks\Source</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\Source\Initiallise.cpp">
+    <ClCompile Include="..\..\Source\Initialise.cpp">
       <Filter>OtoDecks\Source</Filter>
     </ClCompile>
     <ClCompile Include="..\..\Source\LibraryComponent.cpp">
@@ -3303,7 +3303,7 @@
     <ClInclude Include="..\..\Source\DJPanel.h">
       <Filter>OtoDecks\Source</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Source\Initiallise.h">
+    <ClInclude Include="..\..\Source\Initialise.h">
       <Filter>OtoDecks\Source</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Source\LibraryComponent.h">

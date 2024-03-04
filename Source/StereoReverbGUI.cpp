@@ -14,13 +14,13 @@ StereoReverbGUI::StereoReverbGUI(StereoReverb* _stereoReverb) : stereoReverb(_st
     Initialise::sliderOptions(this, &freezeModeSlider, this, Slider::LinearVertical, Slider::TextBoxBelow, false, 50, 10, 0.0, 1.0, 0.01, &v1, freezeModeSlider.textBoxOutlineColourId, Colours::transparentWhite);
 
     // Labels
-    Initialise::labelOptions(this, &label, "Stereo Reverb", dontSendNotification, Justification::centred, 14.0f, label.textColourId, Colours::cyan);
-    Initialise::labelOptions(this, &roomSize, "RS", dontSendNotification, Justification::centred, 14.0f, label.textColourId, Colours::fuchsia);
-    Initialise::labelOptions(this, &damping, "DMP", dontSendNotification, Justification::centred, 14.0f, label.textColourId, Colours::cyan);
-    Initialise::labelOptions(this, &wetLevel, "WL", dontSendNotification, Justification::centred, 14.0f, label.textColourId, Colours::fuchsia);
-    Initialise::labelOptions(this, &dryLevel, "DL", dontSendNotification, Justification::centred, 14.0f, label.textColourId, Colours::cyan);
-    Initialise::labelOptions(this, &width, "W", dontSendNotification, Justification::centred, 14.0f, label.textColourId, Colours::fuchsia);
-    Initialise::labelOptions(this, &freezeMode, "FM", dontSendNotification, Justification::centred, 14.0f, label.textColourId, Colours::cyan);
+    Initialise::labelOptions(this, &label, "Stereo Reverb", dontSendNotification, Justification::centred, 14.0f, label.textColourId, Colour::fromRGBA(11, 24, 98, 255));
+    Initialise::labelOptions(this, &roomSize, "RS", dontSendNotification, Justification::centred, 14.0f, label.textColourId, Colour::fromRGBA(79, 0, 16, 255));
+    Initialise::labelOptions(this, &damping, "DMP", dontSendNotification, Justification::centred, 14.0f, label.textColourId, Colour::fromRGBA(11, 24, 98, 255));
+    Initialise::labelOptions(this, &wetLevel, "WL", dontSendNotification, Justification::centred, 14.0f, label.textColourId, Colour::fromRGBA(79, 0, 16, 255));
+    Initialise::labelOptions(this, &dryLevel, "DL", dontSendNotification, Justification::centred, 14.0f, label.textColourId, Colour::fromRGBA(11, 24, 98, 255));
+    Initialise::labelOptions(this, &width, "W", dontSendNotification, Justification::centred, 14.0f, label.textColourId, Colour::fromRGBA(79, 0, 16, 255));
+    Initialise::labelOptions(this, &freezeMode, "FM", dontSendNotification, Justification::centred, 14.0f, label.textColourId, Colour::fromRGBA(11, 24, 98, 255));
 
     // Slider labels
     roomSize.attachToComponent(&roomSizeSlider, false);
@@ -32,7 +32,7 @@ StereoReverbGUI::StereoReverbGUI(StereoReverb* _stereoReverb) : stereoReverb(_st
 
     // Info button
     auto infoImage = ImageCache::getFromMemory(BinaryData::info_png, BinaryData::info_pngSize);
-    infoBtn.setImages(true, true, true, infoImage, 1, Colours::mediumpurple, Image(nullptr), 1, Colours::cyan, Image(nullptr), 1, Colours::transparentBlack);
+    infoBtn.setImages(true, true, true, infoImage, 1, Colours::mediumpurple, Image(nullptr), 1, Colour::fromRGBA(11, 24, 98, 255), Image(nullptr), 1, Colours::transparentBlack);
     addAndMakeVisible(infoBtn);
     infoBtn.setTooltip("R: Room Size, DMP: Damping, WL: Wet Level, DL: Dry Level, W: Width, FM: Freeze Mode");
 }
@@ -51,9 +51,9 @@ StereoReverbGUI::~StereoReverbGUI()
 void StereoReverbGUI::paint(Graphics& g)
 {
     // Fill background
-    g.fillAll(Colour::fromRGBA(33, 0, 75, 255));
+    g.fillAll(Colour::fromRGBA(255, 183, 197, 255));
     // Outline component
-    g.setColour(Colour::fromRGBA(33, 0, 75, 255));
+    g.setColour(Colour::fromRGBA(255, 183, 197, 255));
     g.drawRect(getLocalBounds(), 1);
     // Outline on header
     g.setColour(Colours::mediumpurple);

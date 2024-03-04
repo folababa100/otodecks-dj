@@ -22,7 +22,7 @@ void LookandFeels::drawRoundThumb(Graphics& g, float x, float y, float diameter,
 
     DropShadow(Colours::mediumpurple, 1, {}).drawForPath(g, p);
 
-    g.setColour(Colour::fromRGB(255, 0, 244));
+    g.setColour(Colour::fromRGB(76, 104, 215));
     g.fillPath(p);
     g.strokePath(p, PathStrokeType(outlineThickness));
 }
@@ -136,7 +136,7 @@ void LookandFeels::drawLinearSliderBackground(Graphics& g, int x, int y, int wid
         off.addRectangle(r);
     }
     // Set slider background colour
-    g.fillAll(Colour::fromRGBA(33, 0, 75, 255));
+    g.fillAll(Colour::fromRGBA(255, 183, 197, 255));
     // Set slider colour -> included portion
     g.setColour(Colour(0xff001dab));
     g.fillPath(on);

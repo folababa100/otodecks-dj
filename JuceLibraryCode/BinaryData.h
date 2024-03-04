@@ -15,25 +15,25 @@ namespace BinaryData
     const int            dj_pngSize = 471715;
 
     extern const char*   folder_png;
-    const int            folder_pngSize = 226524;
+    const int            folder_pngSize = 3404;
 
     extern const char*   info_png;
     const int            info_pngSize = 15493;
 
     extern const char*   pause_png;
-    const int            pause_pngSize = 34288;
+    const int            pause_pngSize = 1270;
 
     extern const char*   play_png;
-    const int            play_pngSize = 21764;
+    const int            play_pngSize = 4671;
 
     extern const char*   save_jpg;
     const int            save_jpgSize = 4521;
 
     extern const char*   stop_png;
-    const int            stop_pngSize = 33384;
+    const int            stop_pngSize = 8948;
 
     extern const char*   load_png;
-    const int            load_pngSize = 14903;
+    const int            load_pngSize = 8222;
 
     // Number of elements in the namedResourceList and originalFileNames arrays.
     const int namedResourceListSize = 9;
