@@ -20,10 +20,17 @@ public:
     void paint(Graphics& g) override;
     void resized() override;
 
+    // Set button properties
+    void setButtonProperties(TextButton& button, double x, double y, double width, double height, Colour colour);
+
     // Implements Slider::Listener, pointer to the slider whose value changed
     void sliderValueChanged(Slider* slider) override;
     // Implement Button::Listener,pointer to the button that is clicked
     void buttonClicked(Button* button) override;
+
+    // Handle button click
+    void handleButtonClick(Button* button, double& hcPos);
+
     // Check if CTRL key is pressed
     bool isCommandDown() const noexcept;
 

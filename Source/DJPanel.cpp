@@ -101,14 +101,16 @@ void DJPanel::paint(Graphics& g)
 
 void DJPanel::resized()
 {
-    double rowH = getHeight() / 5;
-    double colW = getWidth() / 8;
-    double colH = getHeight() / 9;
-    double sliderW = getWidth() / 3;
-    double sliderH = getHeight() / 10;
-    double buttonW = sliderW * 1.2;
-    double buttonH = sliderH * 1.2;
+    const double rowH = getHeight() / 5;
+    const double colW = getWidth() / 8;
+    const double colH = getHeight() / 9;
+    const double sliderW = getWidth() / 3;
+    const double sliderH = getHeight() / 10;
+    const double buttonW = sliderW * 1.2;
+    const double buttonH = sliderH * 1.2;
 
+    const Colour buttonOnColour1 = Colour::fromRGB(102, 157, 246);
+    const Colour buttonOnColour2 = Colour::fromRGB(1, 30, 254);
 
     // Volume Slider
     volSlider.setNumDecimalPlacesToDisplay(0);
@@ -122,25 +124,18 @@ void DJPanel::resized()
     loopSlider.setBounds(colW * 4.7, rowH * 3, buttonW, sliderH * 2.8);
 
     // Hot Cue Buttons
-    hcBtn1.setBounds(colW, colH * 4.615, buttonW, buttonH);
-    hcBtn1.setColour(TextButton::ColourIds::buttonOnColourId, Colour::fromRGB(102, 157, 246));
-    hcBtn1.setColour(TextButton::ColourIds::textColourOnId, Colours::black);
-    hcBtn1.setMouseCursor(MouseCursor::PointingHandCursor);
+    setButtonProperties(hcBtn1, colW, colH * 4.615, buttonW, buttonH, buttonOnColour1);
+    setButtonProperties(hcBtn2, colW, colH * 5.7, buttonW, buttonH, buttonOnColour2);
+    setButtonProperties(hcBtn3, colW, colH * 6.8, buttonW, buttonH, buttonOnColour1);
+    setButtonProperties(hcBtn4, colW, colH * 7.9, buttonW, buttonH, buttonOnColour2);
+}
 
-    hcBtn2.setBounds(colW, colH * 5.7, buttonW, buttonH);
-    hcBtn2.setColour(TextButton::ColourIds::buttonOnColourId, Colour::fromRGB(1, 30, 254));
-    hcBtn2.setColour(TextButton::ColourIds::textColourOnId, Colours::black);
-    hcBtn2.setMouseCursor(MouseCursor::PointingHandCursor);
-
-    hcBtn3.setBounds(colW, colH * 6.8, buttonW, buttonH);
-    hcBtn3.setColour(TextButton::ColourIds::buttonOnColourId, Colour::fromRGB(102, 157, 246));
-    hcBtn3.setColour(TextButton::ColourIds::textColourOnId, Colours::black);
-    hcBtn3.setMouseCursor(MouseCursor::PointingHandCursor);
-
-    hcBtn4.setBounds(colW, colH * 7.9, buttonW, buttonH);
-    hcBtn4.setColour(TextButton::ColourIds::buttonOnColourId, Colour::fromRGB(1, 30, 254));
-    hcBtn4.setColour(TextButton::ColourIds::textColourOnId, Colours::black);
-    hcBtn4.setMouseCursor(MouseCursor::PointingHandCursor);
+void DJPanel::setButtonProperties(TextButton& button, double x, double y, double width, double height, Colour colour)
+{
+    button.setBounds(x, y, width, height);
+    button.setColour(TextButton::ColourIds::buttonOnColourId, colour);
+    button.setColour(TextButton::ColourIds::textColourOnId, Colours::black);
+    button.setMouseCursor(MouseCursor::PointingHandCursor);
 }
 
 void DJPanel::sliderValueChanged(Slider* slider)
@@ -161,102 +156,47 @@ void DJPanel::sliderValueChanged(Slider* slider)
     }
 }
 
+void DJPanel::handleButtonClick(Button* button, double& hcPos)
+{
+    if (!isCommandDown())
+    {
+        if (hcPos == -1.0)
+        {
+            // Set cue
+            hcPos = player->getPosInTrack();
+            button->setToggleState(true, NotificationType::dontSendNotification);
+        }
+        else
+        {
+            // Recall cue
+            player->setPosition(hcPos);
+        }
+    }
+    else
+    {
+        // Reset when user press CTRL & click the button
+        hcPos = -1.0;
+        button->setToggleState(false, NotificationType::dontSendNotification);
+    }
+}
+
 void DJPanel::buttonClicked(Button* button)
 {
     if (button == &hcBtn1)
     {
-        if (!isCommandDown())
-        {
-            if (hcPos1 == -1.0)
-            {
-                // Set cue
-                hcPos1 = player->getPosInTrack();
-                hcBtn1.setToggleState(true, NotificationType::dontSendNotification);
-            }
-            else
-            {
-                // Recall cue
-                player->setPosition(hcPos1);
-            }
-        }
-        else
-        {
-            // Reset when user press CTRL & click the button
-            hcPos1 = -1.0;
-            hcBtn1.setToggleState(false, NotificationType::dontSendNotification);
-        }
+        handleButtonClick(button, hcPos1);
     }
-
-    if (button == &hcBtn2)
+    else if (button == &hcBtn2)
     {
-        if (!isCommandDown())
-        {
-            if (hcPos2 == -1.0)
-            {
-                // Set cue
-                hcPos2 = player->getPosInTrack();
-                hcBtn2.setToggleState(true, NotificationType::dontSendNotification);
-            }
-            else
-            {
-                // Recall cue
-                player->setPosition(hcPos2);
-            }
-        }
-        else
-        {
-            // Reset when user press CTRL & click the button
-            hcPos2 = -1.0;
-            hcBtn2.setToggleState(false, NotificationType::dontSendNotification);
-        }
+        handleButtonClick(button, hcPos2);
     }
-
-    if (button == &hcBtn3)
+    else if (button == &hcBtn3)
     {
-        if (!isCommandDown())
-        {
-            if (hcPos3 == -1.0)
-            {
-                // Set cue
-                hcPos3 = player->getPosInTrack();
-                hcBtn3.setToggleState(true, NotificationType::dontSendNotification);
-            }
-            else
-            {
-                // Recall cue
-                player->setPosition(hcPos3);
-            }
-        }
-        else
-        {
-            // Reset when user press CTRL & click the button
-            hcPos3 = -1.0;
-            hcBtn3.setToggleState(false, NotificationType::dontSendNotification);
-        }
+        handleButtonClick(button, hcPos3);
     }
-
-    if (button == &hcBtn4)
+    else if (button == &hcBtn4)
     {
-        if (!isCommandDown())
-        {
-            if (hcPos4 == -1.0)
-            {
-                // Set cue
-                hcPos4 = player->getPosInTrack();
-                hcBtn4.setToggleState(true, NotificationType::dontSendNotification);
-            }
-            else
-            {
-                // Recall cue
-                player->setPosition(hcPos4);
-            }
-        }
-        else
-        {
-            // Reset when user press CTRL & click the button
-            hcPos4 = -1.0;
-            hcBtn4.setToggleState(false, NotificationType::dontSendNotification);
-        }
+        handleButtonClick(button, hcPos4);
     }
 }
 
