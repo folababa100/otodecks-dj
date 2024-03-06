@@ -1,178 +1,104 @@
 #include "DJAudioPlayer.h"
 
-//==============================================================================
-DJAudioPlayer::DJAudioPlayer(AudioFormatManager& _formatManager)
-    : formatManager(_formatManager),
-    loopIsActivated(false),
-    loopEnd(0.0),
-    loopStart(0.0),
-    loopSeconds(0.0),
-    justLoaded(false)
-{
-    startTimer(500);
+DJAudioPlayer::DJAudioPlayer(AudioFormatManager& formatManager)
+        : AudioAppComponent(),
+          formatManager(formatManager),
+          resampleSource(&transportSource, false, 2) {
+    startTimer(500); // Timer callback every 500 ms for checking loop conditions
 }
 
-DJAudioPlayer::~DJAudioPlayer()
-{
+DJAudioPlayer::~DJAudioPlayer() {
     stopTimer();
 }
 
-void DJAudioPlayer::prepareToPlay(int samplesPerBlockExpected, double sampleRate)
-{
+void DJAudioPlayer::prepareToPlay(int samplesPerBlockExpected, double sampleRate) {
     transportSource.prepareToPlay(samplesPerBlockExpected, sampleRate);
     resampleSource.prepareToPlay(samplesPerBlockExpected, sampleRate);
 }
 
-void DJAudioPlayer::getNextAudioBlock(const AudioSourceChannelInfo& bufferToFill)
-{
+void DJAudioPlayer::getNextAudioBlock(const AudioSourceChannelInfo& bufferToFill) {
     resampleSource.getNextAudioBlock(bufferToFill);
 }
 
-void DJAudioPlayer::releaseResources()
-{
+void DJAudioPlayer::releaseResources() {
     transportSource.releaseResources();
     resampleSource.releaseResources();
 }
 
-void DJAudioPlayer::loadURL(URL audioURL)
-{
+void DJAudioPlayer::loadURL(const URL& audioURL) {
     auto* reader = formatManager.createReaderFor(audioURL.createInputStream(false));
-
-    if (reader != nullptr) // good file!
-    {
-        std::unique_ptr<AudioFormatReaderSource> newSource
-        (
-            new AudioFormatReaderSource(reader, true)
-        );
+    if (reader != nullptr) {
+        auto newSource = std::make_unique<AudioFormatReaderSource>(reader, true);
         transportSource.setSource(newSource.get(), 0, nullptr, reader->sampleRate);
         readerSource.reset(newSource.release());
-    }
-    else
-    {
-        std::cout << "DJAudioPlayer::loadURL Bad audio file!" << std::endl;
-        DBG("DJAudioPlayer::loadURL Bad audio file!");
-    }
-
-    justLoaded = true;
-}
-
-void DJAudioPlayer::setGain(double gain)
-{
-    gain = gain / 100;
-
-    if (gain < 0 || gain > 1.0)
-    {
-        std::cout << "DJAudioPlayer::setGain gain should be between 0 and 1" << std::endl;
-        DBG("DJAudioPlayer::setGain gain should be between 0 and 1");
-    }
-    else {
-        transportSource.setGain(gain);
+        justLoaded = true;
+    } else {
+        DBG("DJAudioPlayer::loadURL: Bad audio file!");
     }
 }
 
-void DJAudioPlayer::setSpeed(double ratio)
-{
-    if (ratio < 0 || ratio > 100.0)
-    {
-        std::cout << "DJAudioPlayer::setSpeed ratio should be between 0 and 100" << std::endl;
-        DBG("DJAudioPlayer::setSpeed ratio should be between 0 and 100");
-    }
-    else
-    {
-        resampleSource.setResamplingRatio(ratio);
-    }
+void DJAudioPlayer::setGain(double gain) {
+    gain = std::clamp(gain, 0.0, 1.0); // Ensure gain is within a valid range
+    transportSource.setGain(gain);
 }
 
-void DJAudioPlayer::setPosition(double posInSecs)
-{
+void DJAudioPlayer::setSpeed(double ratio) {
+    ratio = std::clamp(ratio, 0.0, MAX_SPEED_RATIO);
+    resampleSource.setResamplingRatio(ratio);
+}
+
+void DJAudioPlayer::setPosition(double posInSecs) {
     transportSource.setPosition(posInSecs);
 }
 
-void DJAudioPlayer::setPositionRelative(double pos)
-{
-    if (pos < 0 || pos > 1.0)
-    {
-        std::cout << "DJAudioPlayer::setPositionRelative pos should be between 0 and 1" << std::endl;
-        DBG("DJAudioPlayer::setPositionRelative pos should be between 0 and 1");
-    }
-    else
-    {
-        double posInSecs = transportSource.getLengthInSeconds() * pos;
-        setPosition(posInSecs);
-        justLoaded = false;
-    }
+void DJAudioPlayer::setPositionRelative(double pos) {
+    pos = std::clamp(pos, 0.0, 1.0); // Ensure position is within a valid range
+    double posInSecs = transportSource.getLengthInSeconds() * pos;
+    setPosition(posInSecs);
 }
 
-void DJAudioPlayer::setLoop(double seconds)
-{
-    if (seconds <= 0 || seconds > 16.0)
-    {
-        loopIsActivated = false;
-        std::cout << "DJAudioPlayer::setLoop seconds should be between 0 and 16" << std::endl;
-        DBG("DJAudioPlayer::setLoop seconds should be between 0 and 16");
-    }
-    else
-    {
+void DJAudioPlayer::setLoop(double seconds) {
+    if (seconds > 0 && seconds <= MAX_LOOP_SECONDS) {
         loopIsActivated = true;
         loopSeconds = seconds;
         loopEnd = transportSource.getCurrentPosition();
         loopStart = loopEnd - seconds;
+    } else {
+        loopIsActivated = false;
     }
 }
 
-void DJAudioPlayer::timerCallback()
-{
-    if (loopIsActivated)
-    {
-        if (transportSource.getCurrentPosition() >= loopEnd)
-        {
-            transportSource.setPosition(loopStart);
-        }
-
-        if (loopSeconds == 0)
-        {
-            loopIsActivated = false;
-            return;
-        }
+void DJAudioPlayer::timerCallback() {
+    if (loopIsActivated && (transportSource.getCurrentPosition() >= loopEnd || loopSeconds == 0)) {
+        transportSource.setPosition(loopStart);
     }
 }
 
-void DJAudioPlayer::start()
-{
+void DJAudioPlayer::start() {
     transportSource.start();
     justLoaded = false;
 }
 
-void DJAudioPlayer::pause()
-{
+void DJAudioPlayer::pause() {
     transportSource.stop();
-    justLoaded = false;
 }
 
-void DJAudioPlayer::stop()
-{
+void DJAudioPlayer::stop() {
     transportSource.stop();
     transportSource.setPosition(0);
-    justLoaded = false;
 }
 
-double DJAudioPlayer::getPosInTrack()
-{
+double DJAudioPlayer::getPosInTrack() const {
     return transportSource.getCurrentPosition();
 }
 
-double DJAudioPlayer::getPositionRelative()
-{
-    return transportSource.getCurrentPosition() / transportSource.getLengthInSeconds();
+double DJAudioPlayer::getPositionRelative() const {
+    auto lengthInSeconds = transportSource.getLengthInSeconds();
+    return (lengthInSeconds > 0) ? (transportSource.getCurrentPosition() / lengthInSeconds) : 0.0;
 }
 
-bool DJAudioPlayer::fileJustLoaded()
-{
-    if (justLoaded)
-    {
-        justLoaded = false;
-        return true;
-    }
-
-    return false;
+bool DJAudioPlayer::fileJustLoaded() {
+    bool wasJustLoaded = justLoaded;
+    justLoaded = false; // Reset the flag after checking
+    return wasJustLoaded;
 }
