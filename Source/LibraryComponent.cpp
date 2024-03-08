@@ -133,7 +133,7 @@ Component *LibraryComponent::refreshComponentForCell(int rowNumber,
         loadLBtn->setButtonText("<");
         loadLBtn->setMouseCursor(MouseCursor::PointingHandCursor);
         loadLBtn->setColour(TextButton::ColourIds::buttonColourId, Colour::fromRGBA(11, 24, 98, 255));
-        loadLBtn->setColour(TextButton::ColourIds::textColourOffId, Colour::fromRGBA(79, 0, 16, 255));
+        loadLBtn->setColour(TextButton::ColourIds::textColourOffId, Colour::fromRGBA(196, 255, 218, 255));
         loadLBtn->addListener(this);
 
         return loadLBtn;
@@ -151,7 +151,7 @@ Component *LibraryComponent::refreshComponentForCell(int rowNumber,
         loadRBtn->setButtonText(">");
         loadRBtn->setMouseCursor(MouseCursor::PointingHandCursor);
         loadRBtn->setColour(TextButton::ColourIds::buttonColourId, Colour::fromRGBA(79, 0, 16, 255));
-        loadRBtn->setColour(TextButton::ColourIds::textColourOffId, Colour::fromRGBA(11, 24, 98, 255));
+        loadRBtn->setColour(TextButton::ColourIds::textColourOffId, Colour::fromRGBA(253, 246, 218, 255));
         loadRBtn->addListener(this);
 
         return loadRBtn;
@@ -169,7 +169,7 @@ Component *LibraryComponent::refreshComponentForCell(int rowNumber,
         deleteTrackBtn->setButtonText("X");
         deleteTrackBtn->setMouseCursor(MouseCursor::PointingHandCursor);
         deleteTrackBtn->setColour(TextButton::ColourIds::buttonColourId, Colours::black);
-        deleteTrackBtn->setColour(TextButton::ColourIds::textColourOffId, Colours::red);
+        deleteTrackBtn->setColour(TextButton::ColourIds::textColourOffId, Colours::white);
         deleteTrackBtn->addListener(this);
 
         return deleteTrackBtn;
