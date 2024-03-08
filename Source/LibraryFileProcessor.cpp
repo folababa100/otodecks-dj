@@ -13,15 +13,14 @@ LibraryFileProcessor::~LibraryFileProcessor()
 void LibraryFileProcessor::createPlaylistFile(std::string fileName)
 {
     auto dir = File::getCurrentWorkingDirectory();
-    int numTries = 0;
 
-    while (!dir.getChildFile("Resources").exists() && numTries++ < 15)
-    {
-        dir = dir.getParentDirectory();
-    }
+    //    Print current working directory to the console
+    std::cout << "Current working directory: " << dir.getFullPathName() << std::endl;
 
-    std::string resourcesDir = (dir.getChildFile("Resources").getFullPathName()).toStdString();
-    std::string filePath = resourcesDir + "/" + fileName;
+    std::string filePath = (dir.getFullPathName()).toStdString() + fileName;
+
+//    Print the file path to the console
+    std::cout << "File path: " << filePath << std::endl;
     playlistFilePath = filePath;
 
     // Open file for writing

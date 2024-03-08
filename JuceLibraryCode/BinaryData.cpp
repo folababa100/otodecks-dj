@@ -8114,6 +8114,15 @@ static const unsigned char temp_binary_data_8[] =
 
 const char* load_png = (const char*) temp_binary_data_8;
 
+//================== playlist.txt ==================
+static const unsigned char temp_binary_data_9[] =
+"en - Qu Zhong Ren Yi San|3:23|file:///C%3A/Users/Xuan%20Min/Music/Otodecks/en%20-%20Qu%20Zhong%20Ren%20Yi%20San.mp3\n"
+"h3R3 - my dear|4:17|file:///C%3A/Users/Xuan%20Min/Music/Otodecks/h3R3%20-%20my%20dear.mp3\n"
+"Huang Ling, MAKS - tan|4:10|file:///C%3A/Users/Xuan%20Min/Music/Otodecks/Huang%20Ling,%20MAKS%20-%20tan.mp3\n"
+"YoungCaptain, Hooleeger-11|3:55|file:///C%3A/Users/Xuan%20Min/Music/Otodecks/YoungCaptain,%20Hooleeger-11.mp3\n";
+
+const char* playlist_txt = (const char*) temp_binary_data_9;
+
 
 const char* getNamedResource (const char* resourceNameUTF8, int& numBytes);
 const char* getNamedResource (const char* resourceNameUTF8, int& numBytes)
@@ -8135,6 +8144,7 @@ const char* getNamedResource (const char* resourceNameUTF8, int& numBytes)
         case 0x847b861f:  numBytes = 4521; return save_jpg;
         case 0x663b186c:  numBytes = 8948; return stop_png;
         case 0x6e06c350:  numBytes = 8222; return load_png;
+        case 0x229a3a83:  numBytes = 424; return playlist_txt;
         default: break;
     }
 
@@ -8152,7 +8162,8 @@ const char* namedResourceList[] =
     "play_png",
     "save_jpg",
     "stop_png",
-    "load_png"
+    "load_png",
+    "playlist_txt"
 };
 
 const char* originalFilenames[] =
@@ -8165,7 +8176,8 @@ const char* originalFilenames[] =
     "play.png",
     "save.jpg",
     "stop.png",
-    "load.png"
+    "load.png",
+    "playlist.txt"
 };
 
 const char* getNamedResourceOriginalFilename (const char* resourceNameUTF8);

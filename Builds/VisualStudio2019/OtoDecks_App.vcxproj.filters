@@ -6422,6 +6422,9 @@
     <None Include="..\..\Resources\load.png">
       <Filter>OtoDecks\Resources</Filter>
     </None>
+    <None Include="..\..\Resources\playlist.txt">
+      <Filter>OtoDecks\Resources</Filter>
+    </None>
     <None Include="C:\JUCE\modules\juce_audio_devices\native\oboe\CMakeLists.txt">
       <Filter>JUCE Modules\juce_audio_devices\native\oboe</Filter>
     </None>

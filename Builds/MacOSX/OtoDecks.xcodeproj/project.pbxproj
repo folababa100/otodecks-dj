@@ -129,6 +129,7 @@
 		C9ED5F4BC7003BEBCBAB1FC3 /* WaveformDisplay.cpp */ /* WaveformDisplay.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = WaveformDisplay.cpp; path = ../../Source/WaveformDisplay.cpp; sourceTree = SOURCE_ROOT; };
 		D4C88AF239D47161CDAF33CC /* StereoReverb.h */ /* StereoReverb.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = StereoReverb.h; path = ../../Source/StereoReverb.h; sourceTree = SOURCE_ROOT; };
 		D5CB600125668D5F7921DF03 /* Security.framework */ /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		D83B33BCAC4296D38F7A45BB /* playlist.txt */ /* playlist.txt */ = {isa = PBXFileReference; lastKnownFileType = text.txt; name = playlist.txt; path = ../../Resources/playlist.txt; sourceTree = SOURCE_ROOT; };
 		D8421FD1FAEB0C13C9371B3B /* MetalKit.framework */ /* MetalKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MetalKit.framework; path = System/Library/Frameworks/MetalKit.framework; sourceTree = SDKROOT; };
 		D9F26D888E87A13829B0B5D6 /* include_juce_events.mm */ /* include_juce_events.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; name = include_juce_events.mm; path = ../../JuceLibraryCode/include_juce_events.mm; sourceTree = SOURCE_ROOT; };
 		DB6D3F8ACD648AF67EF27B99 /* include_juce_graphics.mm */ /* include_juce_graphics.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; name = include_juce_graphics.mm; path = ../../JuceLibraryCode/include_juce_graphics.mm; sourceTree = SOURCE_ROOT; };
@@ -270,6 +271,7 @@
 				44D113F7125DEA46EDE1E298,
 				A920CB8173C082E719CA9AFF,
 				600CC3DEFF161D2E2838F4A8,
+				D83B33BCAC4296D38F7A45BB,
 			);
 			name = Resources;
 			sourceTree = "<group>";

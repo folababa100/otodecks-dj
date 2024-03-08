@@ -3628,6 +3628,7 @@
     <None Include="..\..\Resources\save.jpg"/>
     <None Include="..\..\Resources\stop.png"/>
     <None Include="..\..\Resources\load.png"/>
+    <None Include="..\..\Resources\playlist.txt"/>
     <None Include="C:\JUCE\modules\juce_audio_devices\native\oboe\CMakeLists.txt"/>
     <None Include="C:\JUCE\modules\juce_audio_devices\native\oboe\README.md"/>
     <None Include="C:\JUCE\modules\juce_audio_formats\codecs\flac\Flac Licence.txt"/>
