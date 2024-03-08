@@ -2,11 +2,7 @@
 
 #include <JuceHeader.h>
 
-//==============================================================================
-/*
-    A class to play audio files with features like play, pause, stop, set gain,
-    set playback speed, loop a section, and load files from a URL.
-*/
+
 class DJAudioPlayer : public AudioAppComponent, public Timer {
 public:
     explicit DJAudioPlayer(AudioFormatManager& formatManager);

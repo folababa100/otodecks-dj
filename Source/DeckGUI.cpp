@@ -16,7 +16,7 @@ DeckGUI::DeckGUI(DJAudioPlayer* _player,
                     isLoaded(false),
                     userExp(0)
     {
-    // Get disc record image to display.
+
     disc = ImageCache::getFromMemory(BinaryData::dj_9_png, BinaryData::dj_9_pngSize);
 
     loadImageButtonImage(playButton, BinaryData::play_png, BinaryData::play_pngSize);
@@ -262,14 +262,14 @@ String DeckGUI::getSongDuration(File songFile)
     double lengthInSecs{ 0.0 };
     auto* reader = formatManager.createReaderFor(URL{ songFile }.createInputStream(false));
 
-    if (reader != nullptr) // good file!
+    if (reader != nullptr) // If file is valid
     {
         numSamples = reader->lengthInSamples;
         sampleRate = reader->sampleRate;
         lengthInSecs = numSamples / sampleRate;
     }
 
-    // Delete reader after using to prevent any memory from leaking.
+    // Prevent memory leak
     delete reader;
 
     int minutes = floor(lengthInSecs / 60.0);

@@ -4,7 +4,7 @@ DJAudioPlayer::DJAudioPlayer(AudioFormatManager& formatManager)
         : AudioAppComponent(),
           formatManager(formatManager),
           resampleSource(&transportSource, false, 2) {
-    startTimer(500); // Timer callback every 500 ms for checking loop conditions
+    startTimer(500);
 }
 
 DJAudioPlayer::~DJAudioPlayer() {
@@ -38,7 +38,7 @@ void DJAudioPlayer::loadURL(const URL& audioURL) {
 }
 
 void DJAudioPlayer::setGain(double gain) {
-    gain = std::clamp(gain, 0.0, 1.0); // Ensure gain is within a valid range
+    gain = std::clamp(gain, 0.0, 1.0);
     transportSource.setGain(gain);
 }
 
@@ -52,7 +52,7 @@ void DJAudioPlayer::setPosition(double posInSecs) {
 }
 
 void DJAudioPlayer::setPositionRelative(double pos) {
-    pos = std::clamp(pos, 0.0, 1.0); // Ensure position is within a valid range
+    pos = std::clamp(pos, 0.0, 1.0);
     double posInSecs = transportSource.getLengthInSeconds() * pos;
     setPosition(posInSecs);
 }
@@ -99,6 +99,6 @@ double DJAudioPlayer::getPositionRelative() const {
 
 bool DJAudioPlayer::fileJustLoaded() {
     bool wasJustLoaded = justLoaded;
-    justLoaded = false; // Reset the flag after checking
+    justLoaded = false;
     return wasJustLoaded;
 }
