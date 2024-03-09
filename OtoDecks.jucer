@@ -11,7 +11,6 @@
       <FILE id="nl0cfO" name="play.png" compile="0" resource="1" file="Resources/play.png"/>
       <FILE id="w8wK3n" name="stop.png" compile="0" resource="1" file="Resources/stop.png"/>
       <FILE id="y6qPoD" name="load.png" compile="0" resource="1" file="Resources/load.png"/>
-      <FILE id="y6qPoD" name="playlist.txt" compile="0" resource="1" file="Resources/playlist.txt"/>
     </GROUP>
     <GROUP id="{356C603F-01E1-55B2-02A0-F2D89D9A59E6}" name="Source">
       <FILE id="QZjy0a" name="WaveformDisplay.cpp" compile="1" resource="0"
