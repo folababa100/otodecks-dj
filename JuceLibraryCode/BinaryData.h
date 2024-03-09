@@ -9,10 +9,7 @@
 namespace BinaryData
 {
     extern const char*   dj_9_png;
-    const int            dj_9_pngSize = 53131;
-
-    extern const char*   dj_png;
-    const int            dj_pngSize = 471715;
+    const int            dj_9_pngSize = 188698;
 
     extern const char*   folder_png;
     const int            folder_pngSize = 3404;
@@ -26,9 +23,6 @@ namespace BinaryData
     extern const char*   play_png;
     const int            play_pngSize = 4671;
 
-    extern const char*   save_jpg;
-    const int            save_jpgSize = 4521;
-
     extern const char*   stop_png;
     const int            stop_pngSize = 8948;
 
@@ -36,10 +30,10 @@ namespace BinaryData
     const int            load_pngSize = 8222;
 
     extern const char*   playlist_txt;
-    const int            playlist_txtSize = 424;
+    const int            playlist_txtSize = 134;
 
     // Number of elements in the namedResourceList and originalFileNames arrays.
-    const int namedResourceListSize = 10;
+    const int namedResourceListSize = 8;
 
     // Points to the start of a list of resource names.
     extern const char* namedResourceList[];

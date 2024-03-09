@@ -3620,12 +3620,10 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="..\..\Resources\dj_9.png"/>
-    <None Include="..\..\Resources\dj.png"/>
     <None Include="..\..\Resources\folder.png"/>
     <None Include="..\..\Resources\info.png"/>
     <None Include="..\..\Resources\pause.png"/>
     <None Include="..\..\Resources\play.png"/>
-    <None Include="..\..\Resources\save.jpg"/>
     <None Include="..\..\Resources\stop.png"/>
     <None Include="..\..\Resources\load.png"/>
     <None Include="..\..\Resources\playlist.txt"/>

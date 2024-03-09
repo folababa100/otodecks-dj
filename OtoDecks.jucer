@@ -5,12 +5,10 @@
   <MAINGROUP id="mcJZqF" name="OtoDecks">
     <GROUP id="{18197C5F-31CF-4B14-9BF0-C5BD57C80881}" name="Resources">
       <FILE id="Ee3xVa" name="dj_9.png" compile="0" resource="1" file="Resources/dj_9.png"/>
-      <FILE id="mLH0W1" name="dj.png" compile="0" resource="1" file="Resources/dj.png"/>
       <FILE id="Z2c37g" name="folder.png" compile="0" resource="1" file="Resources/folder.png"/>
       <FILE id="Dv6rRF" name="info.png" compile="0" resource="1" file="Resources/info.png"/>
       <FILE id="IXnljU" name="pause.png" compile="0" resource="1" file="Resources/pause.png"/>
       <FILE id="nl0cfO" name="play.png" compile="0" resource="1" file="Resources/play.png"/>
-      <FILE id="dm2vhv" name="save.jpg" compile="0" resource="1" file="Resources/save.jpg"/>
       <FILE id="w8wK3n" name="stop.png" compile="0" resource="1" file="Resources/stop.png"/>
       <FILE id="y6qPoD" name="load.png" compile="0" resource="1" file="Resources/load.png"/>
       <FILE id="y6qPoD" name="playlist.txt" compile="0" resource="1" file="Resources/playlist.txt"/>

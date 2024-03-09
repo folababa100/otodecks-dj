@@ -80,7 +80,6 @@
 		4295E3EEC12036AD756522FB /* CoreMIDI.framework */ /* CoreMIDI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMIDI.framework; path = System/Library/Frameworks/CoreMIDI.framework; sourceTree = SDKROOT; };
 		43F521CEEB7B7877BA149492 /* Info-App.plist */ /* Info-App.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Info-App.plist"; path = "Info-App.plist"; sourceTree = SOURCE_ROOT; };
 		44585C98908CA16D140ABA50 /* DiscRecording.framework */ /* DiscRecording.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DiscRecording.framework; path = System/Library/Frameworks/DiscRecording.framework; sourceTree = SDKROOT; };
-		44D113F7125DEA46EDE1E298 /* save.jpg */ /* save.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = save.jpg; path = ../../Resources/save.jpg; sourceTree = SOURCE_ROOT; };
 		4AAC3F1F8EA32B19F5D6995B /* LibraryFileProcessor.cpp */ /* LibraryFileProcessor.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = LibraryFileProcessor.cpp; path = ../../Source/LibraryFileProcessor.cpp; sourceTree = SOURCE_ROOT; };
 		4CC60D0F19B76C30ACF76262 /* juce_cryptography */ /* juce_cryptography */ = {isa = PBXFileReference; lastKnownFileType = folder; name = juce_cryptography; path = /Users/folababa/Downloads/JUCE/modules/juce_cryptography; sourceTree = "<absolute>"; };
 		5488BEBF6ED7460F27F3AA40 /* pause.png */ /* pause.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = pause.png; path = ../../Resources/pause.png; sourceTree = SOURCE_ROOT; };
@@ -93,7 +92,6 @@
 		6094DF97EC9E6ADE8B5680B1 /* Initialise.cpp */ /* Initialise.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = Initialise.cpp; path = ../../Source/Initialise.cpp; sourceTree = SOURCE_ROOT; };
 		622F20976B6CF853C18FFA7D /* include_juce_data_structures.mm */ /* include_juce_data_structures.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; name = include_juce_data_structures.mm; path = ../../JuceLibraryCode/include_juce_data_structures.mm; sourceTree = SOURCE_ROOT; };
 		62971553E89A7E7D8ECFEA5C /* LibraryFileProcessor.h */ /* LibraryFileProcessor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = LibraryFileProcessor.h; path = ../../Source/LibraryFileProcessor.h; sourceTree = SOURCE_ROOT; };
-		62F9B4E3BAB6A6C241557F7C /* dj.png */ /* dj.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = dj.png; path = ../../Resources/dj.png; sourceTree = SOURCE_ROOT; };
 		63A0CEC7EEC21FFBC04D91E0 /* App */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OtoDecks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A76D6BEEFC1BAD446194A12 /* include_juce_opengl.mm */ /* include_juce_opengl.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; name = include_juce_opengl.mm; path = ../../JuceLibraryCode/include_juce_opengl.mm; sourceTree = SOURCE_ROOT; };
 		6C99CA80E51BF999BF1AF9B4 /* juce_audio_formats */ /* juce_audio_formats */ = {isa = PBXFileReference; lastKnownFileType = folder; name = juce_audio_formats; path = /Users/folababa/Downloads/JUCE/modules/juce_audio_formats; sourceTree = "<absolute>"; };
@@ -263,12 +261,10 @@
 			isa = PBXGroup;
 			children = (
 				F610B7276E83ED07007D5460,
-				62F9B4E3BAB6A6C241557F7C,
 				A80012787E6B52989B6A6771,
 				9B6C8917A1F81415B05857CA,
 				5488BEBF6ED7460F27F3AA40,
 				6D5CC7B8080B78C119F530BA,
-				44D113F7125DEA46EDE1E298,
 				A920CB8173C082E719CA9AFF,
 				600CC3DEFF161D2E2838F4A8,
 				D83B33BCAC4296D38F7A45BB,

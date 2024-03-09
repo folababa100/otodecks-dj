@@ -6398,9 +6398,6 @@
     <None Include="..\..\Resources\dj_9.png">
       <Filter>OtoDecks\Resources</Filter>
     </None>
-    <None Include="..\..\Resources\dj.png">
-      <Filter>OtoDecks\Resources</Filter>
-    </None>
     <None Include="..\..\Resources\folder.png">
       <Filter>OtoDecks\Resources</Filter>
     </None>
@@ -6411,9 +6408,6 @@
       <Filter>OtoDecks\Resources</Filter>
     </None>
     <None Include="..\..\Resources\play.png">
-      <Filter>OtoDecks\Resources</Filter>
-    </None>
-    <None Include="..\..\Resources\save.jpg">
       <Filter>OtoDecks\Resources</Filter>
     </None>
     <None Include="..\..\Resources\stop.png">
