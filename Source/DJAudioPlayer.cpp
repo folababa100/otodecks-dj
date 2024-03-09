@@ -38,7 +38,7 @@ void DJAudioPlayer::loadURL(const URL& audioURL) {
 }
 
 void DJAudioPlayer::setGain(double gain) {
-    gain = std::clamp(gain, 0.0, 1.0);
+    gain = std::clamp(gain / 100, 0.0, 1.0);
     transportSource.setGain(gain);
 }
 
