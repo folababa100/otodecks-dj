@@ -5,7 +5,7 @@
 #include "DeckGUI.h"
 #include "DJPanel.h"
 #include "Track.h"
-#include "StereoReverbGUI.h"
+#include "StereoGUI.h"
 
 //==============================================================================
 /*
@@ -53,7 +53,7 @@ private:
     TooltipWindow tip{ this, 700 };
 
     // Stereo Reverb GUI
-    StereoReverbGUI stereoReverbGUI{&stereoReverb};
+    StereoGUI stereoReverbGUI{&stereoReverb};
     // Stereo Reverb
     Stereo stereoReverb{&mixerSource};
 

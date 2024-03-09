@@ -7,12 +7,12 @@
 //==============================================================================
 /*
 */
-class StereoReverbGUI  : public Component,
+class StereoGUI  : public Component,
                          public Slider::Listener
 {
 public:
-    StereoReverbGUI(Stereo* _stereoReverb);
-    ~StereoReverbGUI() override;
+    StereoGUI(Stereo* _stereoReverb);
+    ~StereoGUI() override;
 
     void paint(Graphics&) override;
     void resized() override;
@@ -35,7 +35,7 @@ private:
     // Customise slider appearance
     Visuals v1;
 
-    // Label for StereoReverbGUI
+    // Label for StereoGUI
     Label label;
 
     // Info button
@@ -44,5 +44,5 @@ private:
     // Stereo reverb filter
     Stereo* stereoReverb;
 
-    JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR(StereoReverbGUI)
+    JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR(StereoGUI)
 };

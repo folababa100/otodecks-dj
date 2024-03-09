@@ -79,7 +79,7 @@ OBJECTS_APP := \
   $(JUCE_OBJDIR)/Initialise_25c02cc0.o \
   $(JUCE_OBJDIR)/Visuals_b68be014.o \
   $(JUCE_OBJDIR)/Stereo_5257fb81.o \
-  $(JUCE_OBJDIR)/StereoReverbGUI_1e2704d2.o \
+  $(JUCE_OBJDIR)/StereoGUI_7cf2a604.o \
   $(JUCE_OBJDIR)/Track_c9ac1f2c.o \
   $(JUCE_OBJDIR)/MainComponent_a6ffb4a5.o \
   $(JUCE_OBJDIR)/Main_90ebc5c2.o \
@@ -149,9 +149,9 @@ $(JUCE_OBJDIR)/Stereo_5257fb81.o: ../../Source/Stereo.cpp
 	@echo "Compiling Stereo.cpp"
 	$(V_AT)$(CXX) $(JUCE_CXXFLAGS) $(JUCE_CPPFLAGS_APP) $(JUCE_CFLAGS_APP) -o "$@" -c "$<"
 
-$(JUCE_OBJDIR)/StereoReverbGUI_1e2704d2.o: ../../Source/StereoReverbGUI.cpp
+$(JUCE_OBJDIR)/StereoGUI_7cf2a604.o: ../../Source/StereoGUI.cpp
 	-$(V_AT)mkdir -p $(@D)
-	@echo "Compiling StereoReverbGUI.cpp"
+	@echo "Compiling StereoGUI.cpp"
 	$(V_AT)$(CXX) $(JUCE_CXXFLAGS) $(JUCE_CPPFLAGS_APP) $(JUCE_CFLAGS_APP) -o "$@" -c "$<"
 
 $(JUCE_OBJDIR)/Track_c9ac1f2c.o: ../../Source/Track.cpp

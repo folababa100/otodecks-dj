@@ -1,9 +1,9 @@
 #include <JuceHeader.h>
-#include "StereoReverbGUI.h"
+#include "StereoGUI.h"
 #include "Initialise.h"
 
 //==============================================================================
-StereoReverbGUI::StereoReverbGUI(Stereo* _stereoReverb) : stereoReverb(_stereoReverb)
+StereoGUI::StereoGUI(Stereo* _stereoReverb) : stereoReverb(_stereoReverb)
 {
     // Sliders
     Initialise::sliderOptions(this, &roomSizeSlider, this, Slider::LinearVertical, Slider::TextBoxBelow, false, 50, 10, 0.0, 1.0, 0.01, &v1, roomSizeSlider.textBoxOutlineColourId, Colours::transparentWhite);
@@ -37,7 +37,7 @@ StereoReverbGUI::StereoReverbGUI(Stereo* _stereoReverb) : stereoReverb(_stereoRe
     infoBtn.setTooltip("R: Room Size, DMP: Damping, WL: Wet Level, DL: Dry Level, W: Width, FM: Freeze Mode");
 }
 
-StereoReverbGUI::~StereoReverbGUI()
+StereoGUI::~StereoGUI()
 {
     // Remove sliders lookandfeel
     roomSizeSlider.setLookAndFeel(nullptr);
@@ -48,7 +48,7 @@ StereoReverbGUI::~StereoReverbGUI()
     freezeModeSlider.setLookAndFeel(nullptr);
 }
 
-void StereoReverbGUI::paint(Graphics& g)
+void StereoGUI::paint(Graphics& g)
 {
     // Fill background
     g.fillAll(Colour::fromRGBA(255, 183, 197, 255));
@@ -65,7 +65,7 @@ void StereoReverbGUI::paint(Graphics& g)
     g.drawText("", getLocalBounds(), Justification::centred, true);
 }
 
-void StereoReverbGUI::resized()
+void StereoGUI::resized()
 {
     double w = getWidth() / 6;
     double h = getHeight() * 0.2;
@@ -87,7 +87,7 @@ void StereoReverbGUI::resized()
 }
 
 // Value of parameters of sliders
-void StereoReverbGUI::sliderValueChanged(Slider* slider)
+void StereoGUI::sliderValueChanged(Slider* slider)
 {
     if (slider == &roomSizeSlider)
     {
