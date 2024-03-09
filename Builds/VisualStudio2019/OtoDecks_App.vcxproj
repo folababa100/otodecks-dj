@@ -141,13 +141,11 @@
     <Lib/>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\Source\MusicLibraryTrack.cpp"/>
     <ClCompile Include="..\..\Source\WaveformDisplay.cpp"/>
     <ClCompile Include="..\..\Source\DeckGUI.cpp"/>
     <ClCompile Include="..\..\Source\DJAudioPlayer.cpp"/>
     <ClCompile Include="..\..\Source\DJPanel.cpp"/>
     <ClCompile Include="..\..\Source\Initialise.cpp"/>
-    <ClCompile Include="..\..\Source\MusicLibrary.cpp"/>
     <ClCompile Include="..\..\Source\Visuals.cpp"/>
     <ClCompile Include="..\..\Source\StereoReverb.cpp"/>
     <ClCompile Include="..\..\Source\StereoReverbGUI.cpp"/>
@@ -2582,13 +2580,11 @@
     <ClCompile Include="..\..\JuceLibraryCode\include_juce_opengl.cpp"/>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\Source\MusicLibraryTrack.h"/>
     <ClInclude Include="..\..\Source\WaveformDisplay.h"/>
     <ClInclude Include="..\..\Source\DeckGUI.h"/>
     <ClInclude Include="..\..\Source\DJAudioPlayer.h"/>
     <ClInclude Include="..\..\Source\DJPanel.h"/>
     <ClInclude Include="..\..\Source\Initialise.h"/>
-    <ClInclude Include="..\..\Source\MusicLibrary.h"/>
     <ClInclude Include="..\..\Source\Visuals.h"/>
     <ClInclude Include="..\..\Source\StereoReverb.h"/>
     <ClInclude Include="..\..\Source\StereoReverbGUI.h"/>

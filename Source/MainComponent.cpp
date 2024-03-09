@@ -23,7 +23,6 @@ MainComponent::MainComponent()
     addAndMakeVisible(deckGUI2);
     addAndMakeVisible(DJPanel1);
     addAndMakeVisible(DJPanel2);
-//    addAndMakeVisible(libraryComponent);
     addAndMakeVisible(stereoReverbGUI);
     // Format the audio files
     formatManager.registerBasicFormats();
@@ -79,7 +78,6 @@ void MainComponent::resized()
     deckGUI2.setBounds(getWidth() * 0.65, getHeight() * 0.35, getWidth() * 0.35, getHeight() * 0.65);
     DJPanel1.setBounds(getWidth() * 0.35, getHeight() * 0.35, getWidth() * 0.15, getHeight() * 0.65);
     DJPanel2.setBounds(getWidth() * 0.50, getHeight() * 0.35, getWidth() * 0.15, getHeight() * 0.65);
-//    libraryComponent.setBounds(0, 0, getWidth() * 0.65, getHeight() * 0.35);
     stereoReverbGUI.setBounds(0, 0, getWidth() * 1, getHeight() * 0.35);
 
 }

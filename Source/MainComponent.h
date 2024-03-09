@@ -4,7 +4,6 @@
 #include "DJAudioPlayer.h"
 #include "DeckGUI.h"
 #include "DJPanel.h"
-#include "MusicLibrary.h"
 #include "Track.h"
 #include "StereoReverbGUI.h"
 
@@ -47,9 +46,6 @@ private:
     Colour purpleDeckColour{ Colour::fromRGBA(201, 0, 255, 255) };
     DeckGUI deckGUI2{ &player2, formatManager, thumbCache, purpleDeckColour, &tip };
     DJPanel DJPanel2{ &player2, &tip};
-
-    // Library playlist
-    MusicLibrary libraryComponent{ formatManager, &deckGUI1, &deckGUI2 };
 
     // Take in 2 audio sources
     MixerAudioSource mixerSource;

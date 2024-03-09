@@ -14,10 +14,6 @@
       <FILE id="y6qPoD" name="playlist.txt" compile="0" resource="1" file="Resources/playlist.txt"/>
     </GROUP>
     <GROUP id="{356C603F-01E1-55B2-02A0-F2D89D9A59E6}" name="Source">
-      <FILE id="fkWhaj" name="MusicLibraryTrack.cpp" compile="1" resource="0"
-            file="Source/MusicLibraryTrack.cpp"/>
-      <FILE id="m4BF9P" name="MusicLibraryTrack.h" compile="0" resource="0"
-            file="Source/MusicLibraryTrack.h"/>
       <FILE id="QZjy0a" name="WaveformDisplay.cpp" compile="1" resource="0"
             file="Source/WaveformDisplay.cpp"/>
       <FILE id="ECHCkl" name="WaveformDisplay.h" compile="0" resource="0"
@@ -31,10 +27,6 @@
       <FILE id="VESEIu" name="DJPanel.h" compile="0" resource="0" file="Source/DJPanel.h"/>
       <FILE id="T90q9w" name="Initialise.cpp" compile="1" resource="0" file="Source/Initialise.cpp"/>
       <FILE id="vzWTYK" name="Initialise.h" compile="0" resource="0" file="Source/Initialise.h"/>
-      <FILE id="ptvg8o" name="MusicLibrary.cpp" compile="1" resource="0"
-            file="Source/MusicLibrary.cpp"/>
-      <FILE id="lAP3ih" name="MusicLibrary.h" compile="0" resource="0"
-            file="Source/MusicLibrary.h"/>
       <FILE id="vF2VSq" name="Visuals.cpp" compile="1" resource="0"
             file="Source/Visuals.cpp"/>
       <FILE id="BOOglp" name="Visuals.h" compile="0" resource="0" file="Source/Visuals.h"/>
