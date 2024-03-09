@@ -30,9 +30,9 @@
       <FILE id="vF2VSq" name="Visuals.cpp" compile="1" resource="0"
             file="Source/Visuals.cpp"/>
       <FILE id="BOOglp" name="Visuals.h" compile="0" resource="0" file="Source/Visuals.h"/>
-      <FILE id="tdKD6B" name="StereoReverb.cpp" compile="1" resource="0"
-            file="Source/StereoReverb.cpp"/>
-      <FILE id="Df8kqe" name="StereoReverb.h" compile="0" resource="0" file="Source/StereoReverb.h"/>
+      <FILE id="tdKD6B" name="Stereo.cpp" compile="1" resource="0"
+            file="Source/Stereo.cpp"/>
+      <FILE id="Df8kqe" name="Stereo.h" compile="0" resource="0" file="Source/Stereo.h"/>
       <FILE id="y4ybYU" name="StereoReverbGUI.cpp" compile="1" resource="0"
             file="Source/StereoReverbGUI.cpp"/>
       <FILE id="TqlTM6" name="StereoReverbGUI.h" compile="0" resource="0"

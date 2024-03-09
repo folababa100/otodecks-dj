@@ -3,7 +3,7 @@
 #include "Initialise.h"
 
 //==============================================================================
-StereoReverbGUI::StereoReverbGUI(StereoReverb* _stereoReverb) : stereoReverb(_stereoReverb)
+StereoReverbGUI::StereoReverbGUI(Stereo* _stereoReverb) : stereoReverb(_stereoReverb)
 {
     // Sliders
     Initialise::sliderOptions(this, &roomSizeSlider, this, Slider::LinearVertical, Slider::TextBoxBelow, false, 50, 10, 0.0, 1.0, 0.01, &v1, roomSizeSlider.textBoxOutlineColourId, Colours::transparentWhite);

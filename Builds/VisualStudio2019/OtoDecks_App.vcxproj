@@ -147,7 +147,7 @@
     <ClCompile Include="..\..\Source\DJPanel.cpp"/>
     <ClCompile Include="..\..\Source\Initialise.cpp"/>
     <ClCompile Include="..\..\Source\Visuals.cpp"/>
-    <ClCompile Include="..\..\Source\StereoReverb.cpp"/>
+    <ClCompile Include="..\..\Source\Stereo.cpp"/>
     <ClCompile Include="..\..\Source\StereoReverbGUI.cpp"/>
     <ClCompile Include="..\..\Source\Track.cpp"/>
     <ClCompile Include="..\..\Source\MainComponent.cpp"/>
@@ -2586,7 +2586,7 @@
     <ClInclude Include="..\..\Source\DJPanel.h"/>
     <ClInclude Include="..\..\Source\Initialise.h"/>
     <ClInclude Include="..\..\Source\Visuals.h"/>
-    <ClInclude Include="..\..\Source\StereoReverb.h"/>
+    <ClInclude Include="..\..\Source\Stereo.h"/>
     <ClInclude Include="..\..\Source\StereoReverbGUI.h"/>
     <ClInclude Include="..\..\Source\Track.h"/>
     <ClInclude Include="..\..\Source\MainComponent.h"/>

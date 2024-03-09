@@ -658,7 +658,7 @@
     <ClCompile Include="..\..\Source\Visuals.cpp">
       <Filter>OtoDecks\Source</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\Source\StereoReverb.cpp">
+    <ClCompile Include="..\..\Source\Stereo.cpp">
       <Filter>OtoDecks\Source</Filter>
     </ClCompile>
     <ClCompile Include="..\..\Source\StereoReverbGUI.cpp">
@@ -3300,7 +3300,7 @@
     <ClInclude Include="..\..\Source\Visuals.h">
       <Filter>OtoDecks\Source</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Source\StereoReverb.h">
+    <ClInclude Include="..\..\Source\Stereo.h">
       <Filter>OtoDecks\Source</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Source\StereoReverbGUI.h">

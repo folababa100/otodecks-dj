@@ -1,7 +1,7 @@
 #pragma once
 
 #include <JuceHeader.h>
-#include "StereoReverb.h"
+#include "Stereo.h"
 #include "Visuals.h"
 
 //==============================================================================
@@ -11,7 +11,7 @@ class StereoReverbGUI  : public Component,
                          public Slider::Listener
 {
 public:
-    StereoReverbGUI(StereoReverb* _stereoReverb);
+    StereoReverbGUI(Stereo* _stereoReverb);
     ~StereoReverbGUI() override;
 
     void paint(Graphics&) override;
@@ -42,7 +42,7 @@ private:
     ImageButton infoBtn;
 
     // Stereo reverb filter
-    StereoReverb* stereoReverb;
+    Stereo* stereoReverb;
 
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR(StereoReverbGUI)
 };

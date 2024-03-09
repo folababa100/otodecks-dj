@@ -55,7 +55,7 @@ private:
     // Stereo Reverb GUI
     StereoReverbGUI stereoReverbGUI{&stereoReverb};
     // Stereo Reverb
-    StereoReverb stereoReverb{&mixerSource};
+    Stereo stereoReverb{&mixerSource};
 
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (MainComponent)
 };

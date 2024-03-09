@@ -1,8 +1,8 @@
 #include <JuceHeader.h>
-#include "StereoReverb.h"
+#include "Stereo.h"
 
 //==============================================================================
-StereoReverb::StereoReverb(MixerAudioSource* mixerSource) : reverbSource(mixerSource, false)
+Stereo::Stereo(MixerAudioSource* mixerSource) : reverbSource(mixerSource, false)
 {
     // Set bypassed
     reverbSource.setBypassed(true);
@@ -16,29 +16,29 @@ StereoReverb::StereoReverb(MixerAudioSource* mixerSource) : reverbSource(mixerSo
     reverbSource.setParameters(defaultParameters);
 }
 
-StereoReverb::~StereoReverb()
+Stereo::~Stereo()
 {
 
 }
 
-void StereoReverb::prepareToPlay(int samplesPerBlockExpected, double sampleRate)
+void Stereo::prepareToPlay(int samplesPerBlockExpected, double sampleRate)
 {
     reverbSource.prepareToPlay(samplesPerBlockExpected, sampleRate);
 }
 
-void StereoReverb::releaseResources()
+void Stereo::releaseResources()
 {
     reverbSource.releaseResources();
 }
 
-void StereoReverb::getNextAudioBlock(const AudioSourceChannelInfo& bufferToFill)
+void Stereo::getNextAudioBlock(const AudioSourceChannelInfo& bufferToFill)
 {
     // Set parameters during callback
     reverbSource.setParameters(parameters);
     reverbSource.getNextAudioBlock(bufferToFill);
 }
 
-void StereoReverb::setBypass()
+void Stereo::setBypass()
 {
     reverbSource.setBypassed(false);
 }

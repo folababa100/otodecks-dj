@@ -5,11 +5,11 @@
 //==============================================================================
 /*
 */
-class StereoReverb  : public AudioSource
+class Stereo  : public AudioSource
 {
 public:
-    StereoReverb(MixerAudioSource* mixerSource);
-    ~StereoReverb();
+    Stereo(MixerAudioSource* mixerSource);
+    ~Stereo();
 
 
     void prepareToPlay(int samplesPerBlockExpected, double sampleRate) override;
