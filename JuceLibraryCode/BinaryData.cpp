@@ -3286,12 +3286,6 @@ static const unsigned char temp_binary_data_6[] =
 
 const char* load_png = (const char*) temp_binary_data_6;
 
-//================== playlist.txt ==================
-static const unsigned char temp_binary_data_7[] =
-"stomps-and-claps-percussion-and-rhythm-141190|0:17|file:///Users/folababa/Downloads/stomps-and-claps-percussion-and-rhythm-141190.mp3\n";
-
-const char* playlist_txt = (const char*) temp_binary_data_7;
-
 
 const char* getNamedResource (const char* resourceNameUTF8, int& numBytes);
 const char* getNamedResource (const char* resourceNameUTF8, int& numBytes)
@@ -3311,7 +3305,6 @@ const char* getNamedResource (const char* resourceNameUTF8, int& numBytes)
         case 0x7000b29e:  numBytes = 4671; return play_png;
         case 0x663b186c:  numBytes = 8948; return stop_png;
         case 0x6e06c350:  numBytes = 8222; return load_png;
-        case 0x229a3a83:  numBytes = 134; return playlist_txt;
         default: break;
     }
 
@@ -3327,8 +3320,7 @@ const char* namedResourceList[] =
     "pause_png",
     "play_png",
     "stop_png",
-    "load_png",
-    "playlist_txt"
+    "load_png"
 };
 
 const char* originalFilenames[] =
@@ -3339,8 +3331,7 @@ const char* originalFilenames[] =
     "pause.png",
     "play.png",
     "stop.png",
-    "load.png",
-    "playlist.txt"
+    "load.png"
 };
 
 const char* getNamedResourceOriginalFilename (const char* resourceNameUTF8);

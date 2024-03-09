@@ -4,7 +4,6 @@
 #include "DJAudioPlayer.h"
 #include "DeckGUI.h"
 #include "DJPanel.h"
-#include "Track.h"
 #include "StereoGUI.h"
 
 //==============================================================================

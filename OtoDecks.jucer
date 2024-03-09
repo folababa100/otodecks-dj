@@ -36,8 +36,6 @@
             file="Source/StereoGUI.cpp"/>
       <FILE id="TqlTM6" name="StereoGUI.h" compile="0" resource="0"
             file="Source/StereoGUI.h"/>
-      <FILE id="jnDrhS" name="Track.cpp" compile="1" resource="0" file="Source/Track.cpp"/>
-      <FILE id="XxMdFB" name="Track.h" compile="0" resource="0" file="Source/Track.h"/>
       <FILE id="nBjnc1" name="MainComponent.h" compile="0" resource="0" file="Source/MainComponent.h"/>
       <FILE id="OJ0Xrs" name="MainComponent.cpp" compile="1" resource="0"
             file="Source/MainComponent.cpp"/>

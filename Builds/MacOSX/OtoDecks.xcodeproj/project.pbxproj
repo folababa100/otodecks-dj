@@ -30,7 +30,6 @@
 		78AD87CEB890BBD7FE1F1CDA /* DeckGUI.cpp */ = {isa = PBXBuildFile; fileRef = 0FB521BBF72F6BD30CFBBC8C; };
 		81986A999A20E051E07BD88D /* include_juce_audio_utils.mm */ = {isa = PBXBuildFile; fileRef = A70D7EC7F4209CB1C677E780; };
 		819E9B0E9ACF83167BD635CB /* include_juce_dsp.mm */ = {isa = PBXBuildFile; fileRef = 0370341CC294579C28CAE98D; };
-		8B469EF3B59864A32AE3AB5F /* Track.cpp */ = {isa = PBXBuildFile; fileRef = EE95004937E0F7B3F96F6644; };
 		946AC5A5371ABB354D112613 /* Accelerate.framework */ = {isa = PBXBuildFile; fileRef = 598E52BEB1E04626A10816CE; };
 		990CD09E79DCB9EF6BA1A5B5 /* CoreAudioKit.framework */ = {isa = PBXBuildFile; fileRef = E7FDCBCE220F888204C5A718; };
 		A50EE840B7A8E1B806AD8520 /* AudioToolbox.framework */ = {isa = PBXBuildFile; fileRef = 20454F2803374EE03B0A50A4; };
@@ -64,7 +63,6 @@
 		0E1B6494883A9C3AD91515D8 /* Visuals.h */ /* Visuals.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Visuals.h; path = ../../Source/Visuals.h; sourceTree = SOURCE_ROOT; };
 		0E66DED0FADEDBA409A040FA /* include_juce_audio_devices.mm */ /* include_juce_audio_devices.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; name = include_juce_audio_devices.mm; path = ../../JuceLibraryCode/include_juce_audio_devices.mm; sourceTree = SOURCE_ROOT; };
 		0FB521BBF72F6BD30CFBBC8C /* DeckGUI.cpp */ /* DeckGUI.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = DeckGUI.cpp; path = ../../Source/DeckGUI.cpp; sourceTree = SOURCE_ROOT; };
-		1601B3F0C870968059842FF7 /* Track.h */ /* Track.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Track.h; path = ../../Source/Track.h; sourceTree = SOURCE_ROOT; };
 		1E87B2A0BF1F5152005EE11D /* Visuals.cpp */ /* Visuals.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = Visuals.cpp; path = ../../Source/Visuals.cpp; sourceTree = SOURCE_ROOT; };
 		20454F2803374EE03B0A50A4 /* AudioToolbox.framework */ /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		2212217E12F88CAC02C07C62 /* IOKit.framework */ /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
@@ -120,7 +118,6 @@
 		C81D2F342FE4C7AB9B93B3D6 /* include_juce_audio_processors_lv2_libs.cpp */ /* include_juce_audio_processors_lv2_libs.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = include_juce_audio_processors_lv2_libs.cpp; path = ../../JuceLibraryCode/include_juce_audio_processors_lv2_libs.cpp; sourceTree = SOURCE_ROOT; };
 		C9ED5F4BC7003BEBCBAB1FC3 /* WaveformDisplay.cpp */ /* WaveformDisplay.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = WaveformDisplay.cpp; path = ../../Source/WaveformDisplay.cpp; sourceTree = SOURCE_ROOT; };
 		D5CB600125668D5F7921DF03 /* Security.framework */ /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
-		D83B33BCAC4296D38F7A45BB /* playlist.txt */ /* playlist.txt */ = {isa = PBXFileReference; lastKnownFileType = text.txt; name = playlist.txt; path = ../../Resources/playlist.txt; sourceTree = SOURCE_ROOT; };
 		D8421FD1FAEB0C13C9371B3B /* MetalKit.framework */ /* MetalKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MetalKit.framework; path = System/Library/Frameworks/MetalKit.framework; sourceTree = SDKROOT; };
 		D9F26D888E87A13829B0B5D6 /* include_juce_events.mm */ /* include_juce_events.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; name = include_juce_events.mm; path = ../../JuceLibraryCode/include_juce_events.mm; sourceTree = SOURCE_ROOT; };
 		DAD30F9CD733E53AA8090728 /* StereoGUI.cpp */ /* StereoGUI.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = StereoGUI.cpp; path = ../../Source/StereoGUI.cpp; sourceTree = SOURCE_ROOT; };
@@ -131,7 +128,6 @@
 		E81E74791F0C8F7492B39D79 /* DJPanel.cpp */ /* DJPanel.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = DJPanel.cpp; path = ../../Source/DJPanel.cpp; sourceTree = SOURCE_ROOT; };
 		EA457706D3A4C8F73E607F08 /* MainComponent.h */ /* MainComponent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MainComponent.h; path = ../../Source/MainComponent.h; sourceTree = SOURCE_ROOT; };
 		ED1BC7E669A2FBBE0B6DEA01 /* AppConfig.h */ /* AppConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppConfig.h; path = ../../JuceLibraryCode/AppConfig.h; sourceTree = SOURCE_ROOT; };
-		EE95004937E0F7B3F96F6644 /* Track.cpp */ /* Track.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = Track.cpp; path = ../../Source/Track.cpp; sourceTree = SOURCE_ROOT; };
 		F361880A8BE91BC52AAB6932 /* juce_audio_processors */ /* juce_audio_processors */ = {isa = PBXFileReference; lastKnownFileType = folder; name = juce_audio_processors; path = /Users/folababa/Downloads/JUCE/modules/juce_audio_processors; sourceTree = "<absolute>"; };
 		F610B7276E83ED07007D5460 /* dj_9.png */ /* dj_9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = dj_9.png; path = ../../Resources/dj_9.png; sourceTree = SOURCE_ROOT; };
 		FE1AD16BD9C5F714BF70AE78 /* BinaryData.h */ /* BinaryData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = BinaryData.h; path = ../../JuceLibraryCode/BinaryData.h; sourceTree = SOURCE_ROOT; };
@@ -261,7 +257,6 @@
 				6D5CC7B8080B78C119F530BA,
 				A920CB8173C082E719CA9AFF,
 				600CC3DEFF161D2E2838F4A8,
-				D83B33BCAC4296D38F7A45BB,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -285,8 +280,6 @@
 				98A699A875323409D9C477E7,
 				DAD30F9CD733E53AA8090728,
 				060E283CB5194D22D8C431DB,
-				EE95004937E0F7B3F96F6644,
-				1601B3F0C870968059842FF7,
 				EA457706D3A4C8F73E607F08,
 				A799043AC50236B70A583BFA,
 				988A92536F6C0FF2146BE468,
@@ -410,7 +403,6 @@
 				E74DE3E1D786563C599A20DD,
 				B4D04035CE77427DB8171F04,
 				D6A58DECB88B916C7943DF3D,
-				8B469EF3B59864A32AE3AB5F,
 				08FB409D54B112C7F3F39850,
 				E531A75057D7DBEE46AB161D,
 				F0170312DFE053BF6C47CF1D,

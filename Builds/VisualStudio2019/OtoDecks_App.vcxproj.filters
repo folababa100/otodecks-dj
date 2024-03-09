@@ -664,9 +664,6 @@
     <ClCompile Include="..\..\Source\StereoGUI.cpp">
       <Filter>OtoDecks\Source</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\Source\Track.cpp">
-      <Filter>OtoDecks\Source</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\Source\MainComponent.cpp">
       <Filter>OtoDecks\Source</Filter>
     </ClCompile>
@@ -3304,9 +3301,6 @@
       <Filter>OtoDecks\Source</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Source\StereoGUI.h">
-      <Filter>OtoDecks\Source</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\Track.h">
       <Filter>OtoDecks\Source</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Source\MainComponent.h">
@@ -6402,9 +6396,6 @@
       <Filter>OtoDecks\Resources</Filter>
     </None>
     <None Include="..\..\Resources\load.png">
-      <Filter>OtoDecks\Resources</Filter>
-    </None>
-    <None Include="..\..\Resources\playlist.txt">
       <Filter>OtoDecks\Resources</Filter>
     </None>
     <None Include="C:\JUCE\modules\juce_audio_devices\native\oboe\CMakeLists.txt">

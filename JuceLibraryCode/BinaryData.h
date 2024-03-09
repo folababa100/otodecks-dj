@@ -29,11 +29,8 @@ namespace BinaryData
     extern const char*   load_png;
     const int            load_pngSize = 8222;
 
-    extern const char*   playlist_txt;
-    const int            playlist_txtSize = 134;
-
     // Number of elements in the namedResourceList and originalFileNames arrays.
-    const int namedResourceListSize = 8;
+    const int namedResourceListSize = 7;
 
     // Points to the start of a list of resource names.
     extern const char* namedResourceList[];
