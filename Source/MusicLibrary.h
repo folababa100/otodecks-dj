@@ -10,7 +10,7 @@
 //==============================================================================
 /*
 */
-class LibraryComponent : public Component,
+class MusicLibrary : public Component,
                          public TableListBoxModel,
                          public Button::Listener,
                          public TextEditor::Listener,
@@ -18,8 +18,8 @@ class LibraryComponent : public Component,
 {
     public:
 
-        LibraryComponent(AudioFormatManager & _formatManager, DeckGUI * deckGUI1, DeckGUI * deckGUI2);
-        ~LibraryComponent() override;
+        MusicLibrary(AudioFormatManager & _formatManager, DeckGUI * deckGUI1, DeckGUI * deckGUI2);
+        ~MusicLibrary() override;
 
         void paint(Graphics& g) override;
         void resized() override;
@@ -79,5 +79,5 @@ class LibraryComponent : public Component,
         DeckGUI* rightDeck;
         LibraryFileProcessor fileProcessor;
 
-        JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR(LibraryComponent)
+        JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR(MusicLibrary)
 };

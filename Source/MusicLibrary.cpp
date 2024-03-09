@@ -1,9 +1,9 @@
 #include <JuceHeader.h>
-#include "LibraryComponent.h"
+#include "MusicLibrary.h"
 #include "Initialise.h"
 
 //==============================================================================
-LibraryComponent::LibraryComponent(AudioFormatManager &_formatManager,
+MusicLibrary::MusicLibrary(AudioFormatManager &_formatManager,
                                    DeckGUI *deckGUI1,
                                    DeckGUI *deckGUI2)
         : formatManager(_formatManager),
@@ -52,14 +52,14 @@ LibraryComponent::LibraryComponent(AudioFormatManager &_formatManager,
     searchBar.setTextToShowWhenEmpty("Search your tracks", Colour::fromRGBA(11, 24, 98, 255));
 }
 
-LibraryComponent::~LibraryComponent() {
+MusicLibrary::~MusicLibrary() {
 }
 
-void LibraryComponent::paint(Graphics &g) {
+void MusicLibrary::paint(Graphics &g) {
     g.fillAll(Colour::fromRGBA(255, 183, 197, 255));
 }
 
-void LibraryComponent::resized() {
+void MusicLibrary::resized() {
     double rowH = getHeight() / 8;
     double colW = getWidth() / 14;
     tableComponent.setBounds(0, rowH, getWidth(), getHeight());
@@ -71,11 +71,11 @@ void LibraryComponent::resized() {
     insertButton.setBounds(colW * 13, rowH * 0.2, colW, rowH * 0.6);
 }
 
-int LibraryComponent::getNumRows() {
+int MusicLibrary::getNumRows() {
     return tracksToDisplay.size();
 }
 
-void LibraryComponent::paintRowBackground(Graphics &g,
+void MusicLibrary::paintRowBackground(Graphics &g,
                                           int rowNumber,
                                           int width,
                                           int height,
@@ -88,7 +88,7 @@ void LibraryComponent::paintRowBackground(Graphics &g,
     }
 }
 
-void LibraryComponent::paintCell(Graphics &g,
+void MusicLibrary::paintCell(Graphics &g,
                                  int rowNumber,
                                  int columnId,
                                  int width,
@@ -117,7 +117,7 @@ void LibraryComponent::paintCell(Graphics &g,
     g.fillRect(width - 1, 0, 1, height);
 }
 
-Component *LibraryComponent::refreshComponentForCell(int rowNumber,
+Component *MusicLibrary::refreshComponentForCell(int rowNumber,
                                                      int columnId,
                                                      bool isRowSelected,
                                                      Component *existingComponentToUpdate) {
@@ -178,7 +178,7 @@ Component *LibraryComponent::refreshComponentForCell(int rowNumber,
     }
 }
 
-void LibraryComponent::buttonClicked(Button *button) {
+void MusicLibrary::buttonClicked(Button *button) {
     if (button == &insertButton) {
         FileChooser chooser{"Add a music file..."};
         if (chooser.browseForMultipleFilesToOpen()) {
@@ -240,7 +240,7 @@ void LibraryComponent::buttonClicked(Button *button) {
     }
 }
 
-void LibraryComponent::textEditorTextChanged(TextEditor &editor) {
+void MusicLibrary::textEditorTextChanged(TextEditor &editor) {
     if (editor.isEmpty() == false) {
         std::vector <Track> results;
         String keyword = editor.getText();
@@ -263,11 +263,11 @@ void LibraryComponent::textEditorTextChanged(TextEditor &editor) {
     }
 }
 
-bool LibraryComponent::isInterestedInFileDrag(const StringArray &files) {
+bool MusicLibrary::isInterestedInFileDrag(const StringArray &files) {
     return true;
 }
 
-void LibraryComponent::filesDropped(const StringArray &files, int x, int y) {
+void MusicLibrary::filesDropped(const StringArray &files, int x, int y) {
     for (const auto &file: files) {
         File songFile{file};
         String songTitle = leftDeck->getSongTitle(songFile);
@@ -300,7 +300,7 @@ void LibraryComponent::filesDropped(const StringArray &files, int x, int y) {
     }
 }
 
-//std::string LibraryComponent::getPlaylistFilePath()
+//std::string MusicLibrary::getPlaylistFilePath()
 //{
 //    auto dir = File::getCurrentWorkingDirectory();
 //
@@ -312,7 +312,7 @@ void LibraryComponent::filesDropped(const StringArray &files, int x, int y) {
 //    return filePath;
 //}
 
-//bool LibraryComponent::playlistFileExists() {
+//bool MusicLibrary::playlistFileExists() {
 //    auto dir = File::getCurrentWorkingDirectory();
 //
 //    auto tableFile = dir.getChildFile("playlist.txt");
@@ -325,7 +325,7 @@ void LibraryComponent::filesDropped(const StringArray &files, int x, int y) {
 //    return false;
 //}
 
-std::string LibraryComponent::getPlaylistFilePath()
+std::string MusicLibrary::getPlaylistFilePath()
 {
     std::string resourcesDir = (File::getSpecialLocation(File::SpecialLocationType::userHomeDirectory)
             .getChildFile("UOL-assignment/Object-Oriented-Prgramming-Finals-main/Resources")
@@ -337,7 +337,7 @@ std::string LibraryComponent::getPlaylistFilePath()
 }
 
 
-bool LibraryComponent::playlistFileExists() {
+bool MusicLibrary::playlistFileExists() {
     std::string resourcesDir = (File::getSpecialLocation(File::SpecialLocationType::userHomeDirectory)
             .getChildFile("UOL-assignment/Object-Oriented-Prgramming-Finals-main/Resources")
             .getFullPathName()).toStdString();
@@ -354,7 +354,7 @@ bool LibraryComponent::playlistFileExists() {
     return false;
 }
 
-bool LibraryComponent::songIsDuplicate(String songTitle) {
+bool MusicLibrary::songIsDuplicate(String songTitle) {
     for (const auto &song: allTracks) {
         if (song.title == songTitle) {
             return true;

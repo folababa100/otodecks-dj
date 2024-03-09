@@ -1,7 +1,7 @@
 #pragma once
 
 #include <JuceHeader.h>
-#include "LookandFeels.h"
+#include "Visuals.h"
 
 class Initialise : public Component,
     public Slider::Listener,
@@ -14,7 +14,7 @@ public:
     static void sliderOptions(Component* component, Slider* slider, Slider::Listener* listener,
                               Slider::SliderStyle style, Slider::TextEntryBoxPosition textPos,
                               bool readOnly, int textBoxW, int textBoxH, double rangeStart,
-                              double rangeEnd, double increment, LookAndFeel* LookandFeels,
+                              double rangeEnd, double increment, LookAndFeel* Visuals,
                               Slider::ColourIds colourid, Colour colour);
 
     static void labelOptions(Component* component, Label* label, String title,

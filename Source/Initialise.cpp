@@ -9,7 +9,7 @@ Initialise::Initialise()
 void Initialise::sliderOptions(Component* component, Slider* slider, Slider::Listener* listener,
                                 Slider::SliderStyle style, Slider::TextEntryBoxPosition textPos,
                                 bool readOnly, int textBoxW, int textBoxH, double rangeStart,
-                                double rangeEnd, double increment, LookAndFeel* LookandFeels,
+                                double rangeEnd, double increment, LookAndFeel* Visuals,
                                 Slider::ColourIds colourid, Colour colour)
 {
     component->addAndMakeVisible(slider);
@@ -18,7 +18,7 @@ void Initialise::sliderOptions(Component* component, Slider* slider, Slider::Lis
     slider->setTextBoxStyle(textPos, readOnly, textBoxW, textBoxH);
     slider->setColour(slider->textBoxOutlineColourId, Colours::transparentWhite);
     slider->setRange(rangeStart, rangeEnd, increment);
-    slider->setLookAndFeel(LookandFeels);
+    slider->setLookAndFeel(Visuals);
     slider->setColour(colourid, colour);
 }
 

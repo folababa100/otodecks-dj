@@ -658,10 +658,10 @@
     <ClCompile Include="..\..\Source\Initialise.cpp">
       <Filter>OtoDecks\Source</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\Source\LibraryComponent.cpp">
+    <ClCompile Include="..\..\Source\MusicLibrary.cpp">
       <Filter>OtoDecks\Source</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\Source\LookandFeels.cpp">
+    <ClCompile Include="..\..\Source\Visuals.cpp">
       <Filter>OtoDecks\Source</Filter>
     </ClCompile>
     <ClCompile Include="..\..\Source\StereoReverb.cpp">
@@ -3306,10 +3306,10 @@
     <ClInclude Include="..\..\Source\Initialise.h">
       <Filter>OtoDecks\Source</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Source\LibraryComponent.h">
+    <ClInclude Include="..\..\Source\MusicLibrary.h">
       <Filter>OtoDecks\Source</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Source\LookandFeels.h">
+    <ClInclude Include="..\..\Source\Visuals.h">
       <Filter>OtoDecks\Source</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Source\StereoReverb.h">

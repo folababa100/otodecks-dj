@@ -31,13 +31,13 @@
       <FILE id="VESEIu" name="DJPanel.h" compile="0" resource="0" file="Source/DJPanel.h"/>
       <FILE id="T90q9w" name="Initialise.cpp" compile="1" resource="0" file="Source/Initialise.cpp"/>
       <FILE id="vzWTYK" name="Initialise.h" compile="0" resource="0" file="Source/Initialise.h"/>
-      <FILE id="ptvg8o" name="LibraryComponent.cpp" compile="1" resource="0"
-            file="Source/LibraryComponent.cpp"/>
-      <FILE id="lAP3ih" name="LibraryComponent.h" compile="0" resource="0"
-            file="Source/LibraryComponent.h"/>
-      <FILE id="vF2VSq" name="LookandFeels.cpp" compile="1" resource="0"
-            file="Source/LookandFeels.cpp"/>
-      <FILE id="BOOglp" name="LookandFeels.h" compile="0" resource="0" file="Source/LookandFeels.h"/>
+      <FILE id="ptvg8o" name="MusicLibrary.cpp" compile="1" resource="0"
+            file="Source/MusicLibrary.cpp"/>
+      <FILE id="lAP3ih" name="MusicLibrary.h" compile="0" resource="0"
+            file="Source/MusicLibrary.h"/>
+      <FILE id="vF2VSq" name="Visuals.cpp" compile="1" resource="0"
+            file="Source/Visuals.cpp"/>
+      <FILE id="BOOglp" name="Visuals.h" compile="0" resource="0" file="Source/Visuals.h"/>
       <FILE id="tdKD6B" name="StereoReverb.cpp" compile="1" resource="0"
             file="Source/StereoReverb.cpp"/>
       <FILE id="Df8kqe" name="StereoReverb.h" compile="0" resource="0" file="Source/StereoReverb.h"/>

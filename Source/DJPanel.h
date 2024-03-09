@@ -2,7 +2,7 @@
 
 #include <JuceHeader.h>
 #include "DJAudioPlayer.h"
-#include "LookandFeels.h"
+#include "Visuals.h"
 
 //==============================================================================
 /*
@@ -32,7 +32,7 @@ public:
 private:
     Label volume, speed, loop, hotCue;
 
-    LookandFeels v1;
+    Visuals v1;
 
     Label label;
 

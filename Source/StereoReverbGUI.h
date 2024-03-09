@@ -2,7 +2,7 @@
 
 #include <JuceHeader.h>
 #include "StereoReverb.h"
-#include "LookandFeels.h"
+#include "Visuals.h"
 
 //==============================================================================
 /*
@@ -33,7 +33,7 @@ private:
     Label roomSize, damping, wetLevel, dryLevel, width, freezeMode;
 
     // Customise slider appearance
-    LookandFeels v1;
+    Visuals v1;
 
     // Label for StereoReverbGUI
     Label label;

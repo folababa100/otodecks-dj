@@ -1,10 +1,10 @@
 #include <JuceHeader.h>
-#include "LookandFeels.h"
+#include "Visuals.h"
 
 // Reference: https://github.com/juce-framework/JUCE/blob/master/examples/GUI/LookAndFeelDemo.h
 
 // ==============================================================================
-LookandFeels::LookandFeels()
+Visuals::Visuals()
 {
     //  In your constructor, you should add any child components, and
     //  initialise any special settings that your component needs.
@@ -13,7 +13,7 @@ LookandFeels::LookandFeels()
 
 // Slider
 // Customise slider thumb appearance
-void LookandFeels::drawRoundThumb(Graphics& g, float x, float y, float diameter, Colour colour, float outlineThickness)
+void Visuals::drawRoundThumb(Graphics& g, float x, float y, float diameter, Colour colour, float outlineThickness)
 {
     auto halfThickness = outlineThickness * 0.5f;
 
@@ -28,7 +28,7 @@ void LookandFeels::drawRoundThumb(Graphics& g, float x, float y, float diameter,
 }
 
 
-void LookandFeels::drawLinearSliderThumb(Graphics& g, int x, int y, int width, int height,
+void Visuals::drawLinearSliderThumb(Graphics& g, int x, int y, int width, int height,
                                          float sliderPos, float minSliderPos, float maxSliderPos,
                                          const Slider::SliderStyle style, Slider& slider)
 {
@@ -71,7 +71,7 @@ void LookandFeels::drawLinearSliderThumb(Graphics& g, int x, int y, int width, i
 }
 
 // Customise slider appearance
-void LookandFeels::drawLinearSlider(Graphics& g, int x, int y, int width, int height,
+void Visuals::drawLinearSlider(Graphics& g, int x, int y, int width, int height,
                                     float sliderPos, float minSliderPos, float maxSliderPos,
                                     const Slider::SliderStyle style, Slider& slider)
 {
@@ -107,7 +107,7 @@ void LookandFeels::drawLinearSlider(Graphics& g, int x, int y, int width, int he
 }
 
 // Customise slider background
-void LookandFeels::drawLinearSliderBackground(Graphics& g, int x, int y, int width, int height,
+void Visuals::drawLinearSliderBackground(Graphics& g, int x, int y, int width, int height,
                                               float, // sliderPos
                                               float, // minSliderPos
                                               float, // maxSliderPos

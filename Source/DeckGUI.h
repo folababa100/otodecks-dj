@@ -12,7 +12,7 @@
     as well as a waveform display and a position slider.
 */
 
-class LibraryComponent;
+class MusicLibrary;
 class DeckGUI  : public Component,
     public Button::Listener,
     public Slider::Listener,

@@ -4,7 +4,7 @@
 #include "DJAudioPlayer.h"
 #include "DeckGUI.h"
 #include "DJPanel.h"
-#include "LibraryComponent.h"
+#include "MusicLibrary.h"
 #include "Track.h"
 #include "StereoReverbGUI.h"
 
@@ -49,7 +49,7 @@ private:
     DJPanel DJPanel2{ &player2, &tip};
 
     // Library playlist
-    LibraryComponent libraryComponent{ formatManager, &deckGUI1, &deckGUI2 };
+    MusicLibrary libraryComponent{ formatManager, &deckGUI1, &deckGUI2 };
 
     // Take in 2 audio sources
     MixerAudioSource mixerSource;

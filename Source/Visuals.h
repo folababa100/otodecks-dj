@@ -5,11 +5,11 @@
 //==============================================================================
 /*
 */
-class LookandFeels  : public LookAndFeel_V4
+class Visuals  : public LookAndFeel_V4
 {
 public:
 
-    LookandFeels();
+    Visuals();
 
     // Customise slider thumb appearance
     void drawRoundThumb(Graphics& g, float x, float y, float diameter, Colour colour, float outlineThickness);

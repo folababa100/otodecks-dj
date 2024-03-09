@@ -78,8 +78,8 @@ OBJECTS_APP := \
   $(JUCE_OBJDIR)/DJAudioPlayer_f05158f2.o \
   $(JUCE_OBJDIR)/DJPanel_e9fc5e9f.o \
   $(JUCE_OBJDIR)/Initialise_25c02cc0.o \
-  $(JUCE_OBJDIR)/LibraryComponent_e4ba500b.o \
-  $(JUCE_OBJDIR)/LookandFeels_c439099e.o \
+  $(JUCE_OBJDIR)/MusicLibrary_2eb7605f.o \
+  $(JUCE_OBJDIR)/Visuals_b68be014.o \
   $(JUCE_OBJDIR)/StereoReverb_cd76bf73.o \
   $(JUCE_OBJDIR)/StereoReverbGUI_1e2704d2.o \
   $(JUCE_OBJDIR)/Track_c9ac1f2c.o \
@@ -146,14 +146,14 @@ $(JUCE_OBJDIR)/Initialise_25c02cc0.o: ../../Source/Initialise.cpp
 	@echo "Compiling Initialise.cpp"
 	$(V_AT)$(CXX) $(JUCE_CXXFLAGS) $(JUCE_CPPFLAGS_APP) $(JUCE_CFLAGS_APP) -o "$@" -c "$<"
 
-$(JUCE_OBJDIR)/LibraryComponent_e4ba500b.o: ../../Source/LibraryComponent.cpp
+$(JUCE_OBJDIR)/MusicLibrary_2eb7605f.o: ../../Source/MusicLibrary.cpp
 	-$(V_AT)mkdir -p $(@D)
-	@echo "Compiling LibraryComponent.cpp"
+	@echo "Compiling MusicLibrary.cpp"
 	$(V_AT)$(CXX) $(JUCE_CXXFLAGS) $(JUCE_CPPFLAGS_APP) $(JUCE_CFLAGS_APP) -o "$@" -c "$<"
 
-$(JUCE_OBJDIR)/LookandFeels_c439099e.o: ../../Source/LookandFeels.cpp
+$(JUCE_OBJDIR)/Visuals_b68be014.o: ../../Source/Visuals.cpp
 	-$(V_AT)mkdir -p $(@D)
-	@echo "Compiling LookandFeels.cpp"
+	@echo "Compiling Visuals.cpp"
 	$(V_AT)$(CXX) $(JUCE_CXXFLAGS) $(JUCE_CPPFLAGS_APP) $(JUCE_CFLAGS_APP) -o "$@" -c "$<"
 
 $(JUCE_OBJDIR)/StereoReverb_cd76bf73.o: ../../Source/StereoReverb.cpp
