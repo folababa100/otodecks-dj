@@ -6,12 +6,12 @@
 #include <fstream>
 #include "Track.h"
 
-class LibraryFileProcessor
+class MusicLibraryTrack
 {
 public:
 
-    LibraryFileProcessor();
-    ~LibraryFileProcessor();
+    MusicLibraryTrack();
+    ~MusicLibraryTrack();
 
     // Create playlist file and appends the first track data to it
     void createPlaylistFile(std::string fileName);

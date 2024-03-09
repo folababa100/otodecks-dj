@@ -3,7 +3,7 @@
 #include <JuceHeader.h>
 #include "Track.h"
 #include "DeckGUI.h"
-#include "LibraryFileProcessor.h"
+#include "MusicLibraryTrack.h"
 #include <vector>
 #include <string>
 
@@ -77,7 +77,7 @@ class MusicLibrary : public Component,
         DJAudioPlayer* player;
         DeckGUI* leftDeck;
         DeckGUI* rightDeck;
-        LibraryFileProcessor fileProcessor;
+        MusicLibraryTrack fileProcessor;
 
         JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR(MusicLibrary)
 };

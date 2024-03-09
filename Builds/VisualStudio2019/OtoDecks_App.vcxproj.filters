@@ -640,7 +640,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\Source\LibraryFileProcessor.cpp">
+    <ClCompile Include="..\..\Source\MusicLibraryTrack.cpp">
       <Filter>OtoDecks\Source</Filter>
     </ClCompile>
     <ClCompile Include="..\..\Source\WaveformDisplay.cpp">
@@ -3288,7 +3288,7 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\Source\LibraryFileProcessor.h">
+    <ClInclude Include="..\..\Source\MusicLibraryTrack.h">
       <Filter>OtoDecks\Source</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Source\WaveformDisplay.h">

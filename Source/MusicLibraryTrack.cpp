@@ -1,16 +1,16 @@
-#include "LibraryFileProcessor.h"
+#include "MusicLibraryTrack.h"
 
-LibraryFileProcessor::LibraryFileProcessor()
+MusicLibraryTrack::MusicLibraryTrack()
 {
 
 }
 
-LibraryFileProcessor::~LibraryFileProcessor()
+MusicLibraryTrack::~MusicLibraryTrack()
 {
     mStream.close();
 }
 
-void LibraryFileProcessor::createPlaylistFile(std::string fileName)
+void MusicLibraryTrack::createPlaylistFile(std::string fileName)
 {
     auto dir = File::getCurrentWorkingDirectory();
 
@@ -35,7 +35,7 @@ void LibraryFileProcessor::createPlaylistFile(std::string fileName)
     mStream.close();
 }
 
-std::vector<Track> LibraryFileProcessor::loadData(std::string filePath)
+std::vector<Track> MusicLibraryTrack::loadData(std::string filePath)
 {
     playlistFilePath = filePath;
 
@@ -54,7 +54,7 @@ std::vector<Track> LibraryFileProcessor::loadData(std::string filePath)
             }
             catch (const std::exception& e)
             {
-                DBG("LibraryFileProcessor::loadData bad data");
+                DBG("MusicLibraryTrack::loadData bad data");
             }
         }
 
@@ -68,7 +68,7 @@ std::vector<Track> LibraryFileProcessor::loadData(std::string filePath)
     return tracks;
 }
 
-void LibraryFileProcessor::appendData(String title,
+void MusicLibraryTrack::appendData(String title,
     String length,
     String path)
 {
@@ -84,7 +84,7 @@ void LibraryFileProcessor::appendData(String title,
     mStream.close();
 }
 
-std::vector<std::string> LibraryFileProcessor::tokenise(std::string line, char separator)
+std::vector<std::string> MusicLibraryTrack::tokenise(std::string line, char separator)
 {
     std::vector<std::string> tokens;
     signed int start;
@@ -106,7 +106,7 @@ std::vector<std::string> LibraryFileProcessor::tokenise(std::string line, char s
     return tokens;
 }
 
-Track LibraryFileProcessor::stringsToTrack(std::vector<std::string> tokens)
+Track MusicLibraryTrack::stringsToTrack(std::vector<std::string> tokens)
 {
     if (tokens.size() != 3) // bad
     {
@@ -120,7 +120,7 @@ Track LibraryFileProcessor::stringsToTrack(std::vector<std::string> tokens)
     return newTrack;
 }
 
-void LibraryFileProcessor::deleteData(int lineNumber)
+void MusicLibraryTrack::deleteData(int lineNumber)
 {
     std::ifstream playlistFile{ playlistFilePath };
     std::string line;
