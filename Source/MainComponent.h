@@ -6,41 +6,30 @@
 #include "DJPanel.h"
 #include "StereoGUI.h"
 
-//==============================================================================
-/*
-    This component lives inside our window, and this is where you should put all
-    your controls and content.
-*/
 class MainComponent   : public AudioAppComponent
 {
 public:
-    //==============================================================================
     MainComponent();
     ~MainComponent();
 
-    //==============================================================================
     void prepareToPlay (int samplesPerBlockExpected, double sampleRate) override;
     void getNextAudioBlock (const AudioSourceChannelInfo& bufferToFill) override;
     void releaseResources() override;
 
-    //==============================================================================
     void paint (Graphics& g) override;
     void resized() override;
 
 private:
-    //==============================================================================
-    // Your private member variables go here...
-
     AudioFormatManager formatManager;
     AudioThumbnailCache thumbCache{ 100 };
 
-    // For left
+    // Left side of the GUI
     DJAudioPlayer player1{ formatManager };
     Colour blueDeckColour{ Colour::fromRGBA(1, 30, 254, 255) };
     DeckGUI deckGUI1{ &player1, formatManager, thumbCache, blueDeckColour, &tip };
     DJPanel DJPanel1{ &player1, &tip };
 
-    // For right
+    // Right side of the GUI
     DJAudioPlayer player2{ formatManager };
     Colour purpleDeckColour{ Colour::fromRGBA(201, 0, 255, 255) };
     DeckGUI deckGUI2{ &player2, formatManager, thumbCache, purpleDeckColour, &tip };
